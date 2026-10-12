@@ -455,15 +455,7 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 ├── docs/                           # build guide and provenance notes
 └── requirements.txt</pre>
 </div>
-<div>
-<h3>Reproduce the figures and paper</h3>
-<pre>python -m pip install -r requirements.txt
-python scripts/generate_figure_06.py
-python scripts/generate_figure_10.py
-latexmk -pdf -interaction=nonstopmode -halt-on-error \
-        -cd -outdir=build paper/manuscript.tex</pre>
-<p class="muted">Vector originals and editable TikZ sources are in <code>paper/figures/</code> and <code>paper/tkz/</code>. See <a href="docs/BUILD.md">docs/BUILD.md</a> for the source-to-figure mapping.</p>
-</div>
+
 </div>
 </div></section>
 
