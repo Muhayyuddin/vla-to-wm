@@ -1,0 +1,188 @@
+{
+  "figure07": {
+    "metric": "Source-reported data scale",
+    "unit": "hours",
+    "axis": "logarithmic",
+    "records": [
+      {
+        "id": "cosmos_raw",
+        "system": "Cosmos WFM",
+        "label": "Raw candidate-video collection",
+        "value_hours": 20000000,
+        "bound_type": "approximate",
+        "display": "approximately 20,000,000 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_version": "arXiv:2501.03575v3",
+        "source_locator": "Sections 1 and 3.1",
+        "source_url": "https://arxiv.org/html/2501.03575v3",
+        "caveat": "Raw collection before curation; not retained training hours.",
+        "subset_of": null
+      },
+      {
+        "id": "vjepa2_pretrain",
+        "system": "V-JEPA 2",
+        "label": "Action-free video pretraining pool",
+        "value_hours": 1000000,
+        "bound_type": "lower_bound",
+        "display": ">1,000,000 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_version": "arXiv:2506.09985v1",
+        "source_locator": "Abstract and Section 2",
+        "source_url": "https://arxiv.org/html/2506.09985v1",
+        "caveat": "Video pretraining pool; image inputs are not converted into video hours.",
+        "subset_of": null
+      },
+      {
+        "id": "pi0_pretrain",
+        "system": "π0",
+        "label": "Robot pretraining mixture",
+        "value_hours": 10000,
+        "bound_type": "lower_bound",
+        "display": ">10,000 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_version": "arXiv:2410.24164v4",
+        "source_locator": "Introduction and conclusion",
+        "source_url": "https://arxiv.org/html/2410.24164v4",
+        "caveat": "Robot-data mixture includes previously collected datasets; excludes the VLM backbone pretraining scale.",
+        "subset_of": null
+      },
+      {
+        "id": "dreamer4_video",
+        "system": "Dreamer 4",
+        "label": "VPT contractor gameplay pool",
+        "value_hours": 2541,
+        "bound_type": "reported_point",
+        "display": "2,541 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_version": "arXiv:2509.24527v1",
+        "source_locator": "Section 4.3 and Appendix: Minecraft VPT",
+        "source_url": "https://arxiv.org/pdf/2509.24527v1",
+        "caveat": "Combined pool with 90/10 training/evaluation split; not all 2,541 hours are training hours.",
+        "subset_of": null
+      },
+      {
+        "id": "droid_full",
+        "system": "DROID",
+        "label": "Reported demonstration corpus",
+        "value_hours": 350,
+        "bound_type": "reported_point",
+        "display": "350 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_version": "arXiv:2403.12945v2",
+        "source_locator": "Abstract",
+        "source_url": "https://arxiv.org/html/2403.12945v2",
+        "caveat": "Reported demonstration-corpus scale, not an established duration for every released trajectory/file.",
+        "subset_of": null
+      },
+      {
+        "id": "dreamer4_actions",
+        "system": "Dreamer 4",
+        "label": "Nested action-label ablation",
+        "value_hours": 100,
+        "bound_type": "reported_point",
+        "display": "100 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_version": "arXiv:2509.24527v1",
+        "source_locator": "Section 4.3 and Figure 7",
+        "source_url": "https://arxiv.org/pdf/2509.24527v1",
+        "caveat": "Subset condition in partial-action-label generation experiments; not additional footage or the full successful agent action-label budget.",
+        "subset_of": "dreamer4_video"
+      },
+      {
+        "id": "vjepa2_ac",
+        "system": "V-JEPA 2-AC",
+        "label": "Robot video with states and derived actions",
+        "value_hours": 62,
+        "bound_type": "upper_bound",
+        "display": "<62 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_version": "arXiv:2506.09985v1",
+        "source_locator": "Abstract and Section 3.1",
+        "source_url": "https://arxiv.org/html/2506.09985v1",
+        "caveat": "Filtered robot adaptation subset with end-effector states and actions derived from consecutive states; excludes earlier action-free pretraining.",
+        "subset_of": null
+      }
+    ],
+    "caveats": [
+      "Heterogeneous populations; no sample-efficiency or annotation-cost ranking.",
+      "Reported point value replaces workbook category exact in the legend.",
+      "The 100-hour Dreamer condition is nested within the 2,541-hour pool, not additive.",
+      "Bounds must remain visible both in marker/arrow design and value labels."
+    ]
+  },
+  "figure12": {
+    "metric": "AutoEval real-robot task success",
+    "unit": "percent",
+    "uncertainty_type": "standard_error",
+    "source_url": "https://arxiv.org/html/2602.02454v1",
+    "source_version": "arXiv:2602.02454v1",
+    "source_locator": "Section 4.1 and Table 1 (PDF pp.4–5)",
+    "records": [
+      {
+        "task": "Open the drawer",
+        "simpler_mean_pct": 34,
+        "simpler_se_pct": 7,
+        "world_gymnast_mean_pct": 58,
+        "world_gymnast_se_pct": 4,
+        "difference_pp": 24,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5
+      },
+      {
+        "task": "Close the drawer",
+        "simpler_mean_pct": 74,
+        "simpler_se_pct": 5,
+        "world_gymnast_mean_pct": 62,
+        "world_gymnast_se_pct": 6,
+        "difference_pp": -12,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5
+      },
+      {
+        "task": "Put the eggplant into the blue sink",
+        "simpler_mean_pct": 32,
+        "simpler_se_pct": 10,
+        "world_gymnast_mean_pct": 72,
+        "world_gymnast_se_pct": 10,
+        "difference_pp": 40,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5
+      },
+      {
+        "task": "Put the eggplant into the yellow basket",
+        "simpler_mean_pct": 40,
+        "simpler_se_pct": 10,
+        "world_gymnast_mean_pct": 78,
+        "world_gymnast_se_pct": 2,
+        "difference_pp": 38,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5
+      }
+    ],
+    "caveats": [
+      "Ten trials per policy-task evaluation, repeated five times; these are evaluation repeats, not five independent training seeds.",
+      "Error bars are source-reported mean ± SE, not SD or 95% CI.",
+      "Four-task package-level comparison; it does not isolate world-model quality or demonstrate general superiority.",
+      "No new significance test, paired-difference SE, confidence interval, or aggregate effect is inferred."
+    ]
+  }
+}

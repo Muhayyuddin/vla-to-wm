@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="515.52" height="216.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 515 216" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="515.52" height="216.0"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-216)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="8" y="200.0" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,400) scale(1,-1)">Real-robot task success (%)</text>
+			<text x="411.4653125" y="200.0" style="font-family: Chart; font-size: 8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,400) scale(1,-1)">Point labels: mean ± SE</text>
+			<path d="M 58,44 L 500,44 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="46.592041015625" y="41.0" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,82) scale(1,-1)">0</text>
+			<path d="M 58,107 L 500,107 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="41.18408203125" y="104.0" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,208) scale(1,-1)">50</text>
+			<path d="M 58,170 L 500,170 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="35.776123046875" y="167.0" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,334) scale(1,-1)">100</text>
+			<text x="72.58447265625" y="178.0" style="font-family: Chart-Bold; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,356) scale(1,-1)">(a)  Open drawer</text>
+			<path d="M 91.15,86.84 L 135.35,117.08 Z" style="stroke: rgb(61%,71%,71%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 91.15,78.02 L 91.15,95.66 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 88.15,78.02 L 94.15,78.02 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 88.15,95.66 L 94.15,95.66 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 135.35,112.04 L 135.35,122.12 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 132.35,112.04 L 138.35,112.04 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 132.35,122.12 L 138.35,122.12 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<rect x="87.65" y="83.34" width="7.0" height="7.0" style="stroke: rgb(34%,40%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="135.35" cy="117.08" r="3.8" style="stroke: rgb(16%,49%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(16%,49%,49%); fill-rule: evenodd;"/>
+			<text x="76.663671875" y="67.02000000000001" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(34%,40%,43%); stroke:none;" transform="translate(0,134) scale(1,-1)">34 ± 7</text>
+			<text x="120.863671875" y="127.12" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(16%,49%,49%); stroke:none;" transform="translate(0,254) scale(1,-1)">58 ± 4</text>
+			<text x="74.4607421875" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">SIMPLER</text>
+			<text x="122.53789062499999" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">World-</text>
+			<text x="117.798095703125" y="21" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,42) scale(1,-1)">Gymnast</text>
+			<text x="182.565673828125" y="178.0" style="font-family: Chart-Bold; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,356) scale(1,-1)">(b)  Close drawer</text>
+			<path d="M 201.65,137.24 L 245.85,122.12 Z" style="stroke: rgb(61%,71%,71%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 201.65,130.94 L 201.65,143.54 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 198.65,130.94 L 204.65,130.94 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 198.65,143.54 L 204.65,143.54 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 245.85,114.56 L 245.85,129.68 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 242.85,114.56 L 248.85,114.56 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 242.85,129.68 L 248.85,129.68 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<rect x="198.15" y="133.74" width="7.0" height="7.0" style="stroke: rgb(34%,40%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="245.85" cy="122.12" r="3.8" style="stroke: rgb(16%,49%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(16%,49%,49%); fill-rule: evenodd;"/>
+			<text x="187.163671875" y="119.94" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(34%,40%,43%); stroke:none;" transform="translate(0,239) scale(1,-1)">74 ± 5</text>
+			<text x="231.363671875" y="134.68" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(16%,49%,49%); stroke:none;" transform="translate(0,269) scale(1,-1)">62 ± 6</text>
+			<text x="184.96074218750002" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">SIMPLER</text>
+			<text x="233.037890625" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">World-</text>
+			<text x="228.298095703125" y="21" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,42) scale(1,-1)">Gymnast</text>
+			<path d="M 168.5,18 L 168.5,174 Z" style="stroke: rgb(83%,85%,85%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="297.0438232421875" y="178.0" style="font-family: Chart-Bold; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,356) scale(1,-1)">(c)  Eggplant to</text>
+			<text x="312.5247802734375" y="168.0" style="font-family: Chart-Bold; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,336) scale(1,-1)">blue sink</text>
+			<path d="M 312.15,84.32 L 356.35,134.72 Z" style="stroke: rgb(61%,71%,71%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 312.15,71.72 L 312.15,96.92 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 309.15,71.72 L 315.15,71.72 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 309.15,96.92 L 315.15,96.92 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 356.35,122.12 L 356.35,147.32 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 353.35,122.12 L 359.35,122.12 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 353.35,147.32 L 359.35,147.32 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<rect x="308.65" y="80.82" width="7.0" height="7.0" style="stroke: rgb(34%,40%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="356.35" cy="134.72" r="3.8" style="stroke: rgb(16%,49%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(16%,49%,49%); fill-rule: evenodd;"/>
+			<text x="294.88046875" y="60.72" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(34%,40%,43%); stroke:none;" transform="translate(0,121) scale(1,-1)">32 ± 10</text>
+			<text x="339.08046875" y="152.32" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(16%,49%,49%); stroke:none;" transform="translate(0,304) scale(1,-1)">72 ± 10</text>
+			<text x="295.4607421875" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">SIMPLER</text>
+			<text x="343.53789062500005" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">World-</text>
+			<text x="338.798095703125" y="21" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,42) scale(1,-1)">Gymnast</text>
+			<path d="M 279,18 L 279,174 Z" style="stroke: rgb(83%,85%,85%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="407.0208740234375" y="178.0" style="font-family: Chart-Bold; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,356) scale(1,-1)">(d)  Eggplant to</text>
+			<text x="411.6776123046875" y="168.0" style="font-family: Chart-Bold; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,336) scale(1,-1)">yellow basket</text>
+			<path d="M 422.65,94.4 L 466.85,142.28 Z" style="stroke: rgb(61%,71%,71%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 422.65,81.8 L 422.65,107 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 419.65,81.8 L 425.65,81.8 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 419.65,107 L 425.65,107 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 466.85,139.76 L 466.85,144.8 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 463.85,139.76 L 469.85,139.76 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 463.85,144.8 L 469.85,144.8 Z" style="stroke: rgb(18%,21%,23%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<rect x="419.15" y="90.9" width="7.0" height="7.0" style="stroke: rgb(34%,40%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="466.85" cy="142.28" r="3.8" style="stroke: rgb(16%,49%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(16%,49%,49%); fill-rule: evenodd;"/>
+			<text x="405.38046875" y="70.8" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(34%,40%,43%); stroke:none;" transform="translate(0,141) scale(1,-1)">40 ± 10</text>
+			<text x="452.363671875" y="149.8" style="font-family: Chart-Bold; font-size: 8px;fill: rgb(16%,49%,49%); stroke:none;" transform="translate(0,299) scale(1,-1)">78 ± 2</text>
+			<text x="405.9607421875" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">SIMPLER</text>
+			<text x="454.03789062500005" y="30" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,60) scale(1,-1)">World-</text>
+			<text x="449.298095703125" y="21" style="font-family: Chart; font-size: 7.8px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,42) scale(1,-1)">Gymnast</text>
+			<path d="M 389.5,18 L 389.5,174 Z" style="stroke: rgb(83%,85%,85%); stroke-linecap: butt; stroke-width: 0.6;"/>
+		</g>
+	</g>
+</svg>

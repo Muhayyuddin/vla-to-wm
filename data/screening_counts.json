@@ -1,0 +1,28 @@
+{
+  "identified": {
+    "database_and_indexed_proceedings": 2455,
+    "other_discovery": 100,
+    "total": 2555
+  },
+  "duplicates_removed": 704,
+  "screened_title_abstract": 1851,
+  "excluded_at_screening": 1525,
+  "full_text_assessed": 326,
+  "full_text_exclusions": {
+    "driving_or_navigation_only": 62,
+    "no_action_or_control_component": 49,
+    "insufficient_technical_detail": 44,
+    "superseded_version": 27,
+    "total": 182
+  },
+  "included": {
+    "VLA": 69,
+    "World model": 42,
+    "Dataset / benchmark / evaluation": 33,
+    "total": 144
+  },
+  "publication_window": {
+    "VLA": "2023-01 to 2026-08",
+    "world_models_and_evaluation": "2018-01 to 2026-08"
+  }
+}

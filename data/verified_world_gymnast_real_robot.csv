@@ -1,5 +1,0 @@
-﻿task,simpler_mean_pct,simpler_se_pct,world_gymnast_mean_pct,world_gymnast_se_pct,difference_pp,trials_per_policy_task_evaluation,repeated_evaluations,source_url,source_cells
-Open the drawer,34,7,58,4,24,10,5,https://arxiv.org/html/2602.02454v1,'World-Gymnast'!A2:Q2
-Close the drawer,74,5,62,6,-12,10,5,https://arxiv.org/html/2602.02454v1,'World-Gymnast'!A3:Q3
-Put the eggplant into the blue sink,32,10,72,10,40,10,5,https://arxiv.org/html/2602.02454v1,'World-Gymnast'!A4:Q4
-Put the eggplant into the yellow basket,40,10,78,2,38,10,5,https://arxiv.org/html/2602.02454v1,'World-Gymnast'!A5:Q5
