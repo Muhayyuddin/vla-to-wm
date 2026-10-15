@@ -1,0 +1,316 @@
+{
+  "audit_date": "2026-10-01",
+  "workbook": "data/VLA_WM_verified_data_and_plots.xlsx",
+  "source_manuscript": "paper/manuscript.tex",
+  "prior_audit": "docs/Plot_Data_Validation.md",
+  "figure6": {
+    "manuscript_lines": [
+      485,
+      490
+    ],
+    "pdf_page": 10,
+    "latex_label": "fig:data-roles",
+    "metric": "Source-reported data scale",
+    "unit": "hours",
+    "recommended_axis": "logarithmic",
+    "records": [
+      {
+        "id": "cosmos_raw",
+        "system": "Cosmos WFM",
+        "label": "Raw candidate-video collection",
+        "suggested_group": "broad_video",
+        "value_hours": 20000000,
+        "bound_type": "approximate",
+        "workbook_bound_type": "approximate",
+        "display": "approximately 20,000,000 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_cells": "'Verified Data Scale'!A2:K2",
+        "value_cells": "'Verified Data Scale'!E2:F2",
+        "source_version": "arXiv:2501.03575v3",
+        "source_locator": "Sections 1 and 3.1",
+        "source_url": "https://arxiv.org/html/2501.03575v3",
+        "caveat": "Raw collection before curation; not retained training hours.",
+        "subset_of": null
+      },
+      {
+        "id": "vjepa2_pretrain",
+        "system": "V-JEPA 2",
+        "label": "Action-free video pretraining pool",
+        "suggested_group": "broad_video",
+        "value_hours": 1000000,
+        "bound_type": "lower_bound",
+        "workbook_bound_type": "lower_bound",
+        "display": ">1,000,000 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_cells": "'Verified Data Scale'!A3:K3",
+        "value_cells": "'Verified Data Scale'!E3:F3",
+        "source_version": "arXiv:2506.09985v1",
+        "source_locator": "Abstract and Section 2",
+        "source_url": "https://arxiv.org/html/2506.09985v1",
+        "caveat": "Video pretraining pool; image inputs are not converted into video hours.",
+        "subset_of": null
+      },
+      {
+        "id": "pi0_pretrain",
+        "system": "π0",
+        "label": "Robot pretraining mixture",
+        "suggested_group": "robot_data",
+        "value_hours": 10000,
+        "bound_type": "lower_bound",
+        "workbook_bound_type": "lower_bound",
+        "display": ">10,000 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_cells": "'Verified Data Scale'!A4:K4",
+        "value_cells": "'Verified Data Scale'!E4:F4",
+        "source_version": "arXiv:2410.24164v4",
+        "source_locator": "Introduction and conclusion",
+        "source_url": "https://arxiv.org/html/2410.24164v4",
+        "caveat": "Robot-data mixture includes previously collected datasets; excludes the VLM backbone pretraining scale.",
+        "subset_of": null
+      },
+      {
+        "id": "dreamer4_video",
+        "system": "Dreamer 4",
+        "label": "VPT contractor gameplay pool",
+        "suggested_group": "gameplay_data",
+        "value_hours": 2541,
+        "bound_type": "reported_point",
+        "workbook_bound_type": "exact",
+        "display": "2,541 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_cells": "'Verified Data Scale'!A5:K5",
+        "value_cells": "'Verified Data Scale'!E5:F5",
+        "source_version": "arXiv:2509.24527v1",
+        "source_locator": "Section 4.3 and Appendix: Minecraft VPT",
+        "source_url": "https://arxiv.org/pdf/2509.24527v1",
+        "caveat": "Combined pool with 90/10 training/evaluation split; not all 2,541 hours are training hours.",
+        "subset_of": null
+      },
+      {
+        "id": "droid_full",
+        "system": "DROID",
+        "label": "Reported demonstration corpus",
+        "suggested_group": "robot_data",
+        "value_hours": 350,
+        "bound_type": "reported_point",
+        "workbook_bound_type": "exact",
+        "display": "350 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_cells": "'Verified Data Scale'!A6:K6",
+        "value_cells": "'Verified Data Scale'!E6:F6",
+        "source_version": "arXiv:2403.12945v2",
+        "source_locator": "Abstract",
+        "source_url": "https://arxiv.org/html/2403.12945v2",
+        "caveat": "Reported demonstration-corpus scale, not an established duration for every released trajectory/file.",
+        "subset_of": null
+      },
+      {
+        "id": "dreamer4_actions",
+        "system": "Dreamer 4",
+        "label": "Nested action-label ablation",
+        "suggested_group": "gameplay_data",
+        "value_hours": 100,
+        "bound_type": "reported_point",
+        "workbook_bound_type": "exact",
+        "display": "100 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_cells": "'Verified Data Scale'!A7:K7",
+        "value_cells": "'Verified Data Scale'!E7:F7",
+        "source_version": "arXiv:2509.24527v1",
+        "source_locator": "Section 4.3 and Figure 7",
+        "source_url": "https://arxiv.org/pdf/2509.24527v1",
+        "caveat": "Subset condition in partial-action-label generation experiments; not additional footage or the full successful agent action-label budget.",
+        "subset_of": "dreamer4_video"
+      },
+      {
+        "id": "vjepa2_ac",
+        "system": "V-JEPA 2-AC",
+        "label": "Robot video with states and derived actions",
+        "suggested_group": "robot_data",
+        "value_hours": 62,
+        "bound_type": "upper_bound",
+        "workbook_bound_type": "upper_bound",
+        "display": "<62 h",
+        "uncertainty": null,
+        "uncertainty_note": "No SE/SD/CI supplied; bound is not an uncertainty interval.",
+        "source_cells": "'Verified Data Scale'!A8:K8",
+        "value_cells": "'Verified Data Scale'!E8:F8",
+        "source_version": "arXiv:2506.09985v1",
+        "source_locator": "Abstract and Section 3.1",
+        "source_url": "https://arxiv.org/html/2506.09985v1",
+        "caveat": "Filtered robot adaptation subset with end-effector states and actions derived from consecutive states; excludes earlier action-free pretraining.",
+        "subset_of": null
+      }
+    ],
+    "caveats": [
+      "Heterogeneous populations; no sample-efficiency or annotation-cost ranking.",
+      "Reported point value replaces workbook category exact in the legend.",
+      "The 100-hour Dreamer condition is nested within the 2,541-hour pool, not additive.",
+      "Bounds must remain visible both in marker/arrow design and value labels."
+    ],
+    "recommended_view": "Light-filled bubbles; logarithmic y axis and explicitly logarithmic area scaling.",
+    "decade_bin_semantics": "Cells indicate the order of magnitude of the plotted point or reported threshold only; preserve >, <, and approximately markers. Lower/upper bounds must not be shown as a finite occupied interval."
+  },
+  "world_gymnast": {
+    "metric": "AutoEval real-robot task success",
+    "unit": "percent",
+    "uncertainty_type": "standard_error",
+    "source_url": "https://arxiv.org/html/2602.02454v1",
+    "source_version": "arXiv:2602.02454v1",
+    "source_locator": "Section 4.1 and Table 1 (PDF pp.4–5)",
+    "records": [
+      {
+        "task": "Open the drawer",
+        "simpler_mean_pct": 34,
+        "simpler_se_pct": 7,
+        "world_gymnast_mean_pct": 58,
+        "world_gymnast_se_pct": 4,
+        "difference_pp": 24,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5,
+        "source_cells": "'World-Gymnast'!A2:Q2",
+        "mean_se_cells": [
+          "'World-Gymnast'!C2:D2",
+          "'World-Gymnast'!F2:G2"
+        ],
+        "difference_cell": "'World-Gymnast'!P2"
+      },
+      {
+        "task": "Close the drawer",
+        "simpler_mean_pct": 74,
+        "simpler_se_pct": 5,
+        "world_gymnast_mean_pct": 62,
+        "world_gymnast_se_pct": 6,
+        "difference_pp": -12,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5,
+        "source_cells": "'World-Gymnast'!A3:Q3",
+        "mean_se_cells": [
+          "'World-Gymnast'!C3:D3",
+          "'World-Gymnast'!F3:G3"
+        ],
+        "difference_cell": "'World-Gymnast'!P3"
+      },
+      {
+        "task": "Put the eggplant into the blue sink",
+        "simpler_mean_pct": 32,
+        "simpler_se_pct": 10,
+        "world_gymnast_mean_pct": 72,
+        "world_gymnast_se_pct": 10,
+        "difference_pp": 40,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5,
+        "source_cells": "'World-Gymnast'!A4:Q4",
+        "mean_se_cells": [
+          "'World-Gymnast'!C4:D4",
+          "'World-Gymnast'!F4:G4"
+        ],
+        "difference_cell": "'World-Gymnast'!P4"
+      },
+      {
+        "task": "Put the eggplant into the yellow basket",
+        "simpler_mean_pct": 40,
+        "simpler_se_pct": 10,
+        "world_gymnast_mean_pct": 78,
+        "world_gymnast_se_pct": 2,
+        "difference_pp": 38,
+        "difference_definition": "World-Gymnast mean minus SIMPLER mean",
+        "difference_uncertainty": null,
+        "difference_uncertainty_note": "Not derived: raw repeat-level results, pairing and covariance are unavailable.",
+        "trials_per_policy_task_evaluation": 10,
+        "repeated_evaluations": 5,
+        "source_cells": "'World-Gymnast'!A5:Q5",
+        "mean_se_cells": [
+          "'World-Gymnast'!C5:D5",
+          "'World-Gymnast'!F5:G5"
+        ],
+        "difference_cell": "'World-Gymnast'!P5"
+      }
+    ],
+    "caveats": [
+      "Ten trials per policy-task evaluation, repeated five times; these are evaluation repeats, not five independent training seeds.",
+      "Error bars are source-reported mean ± SE, not SD or 95% CI.",
+      "Four-task package-level comparison; it does not isolate world-model quality or demonstrate general superiority.",
+      "No new significance test, paired-difference SE, confidence interval, or aggregate effect is inferred."
+    ]
+  },
+  "figure9": {
+    "manuscript_lines": [
+      626,
+      631
+    ],
+    "pdf_page": 14,
+    "latex_label": "fig:worldgymnast-transfer",
+    "dataset": "world_gymnast",
+    "intended_metric": "AutoEval success means ± standard error",
+    "recommended_view": "Four side-by-side paired slope panels, one per task, with the same 0–100% success scale, endpoints for SIMPLER and World-Gymnast, source-reported SE bars, and numeric labels. The line connects reported means, not paired physical trials."
+  },
+  "figure10": {
+    "manuscript_lines": [
+      676,
+      689
+    ],
+    "pdf_page": 15,
+    "latex_label": "fig:worldgymnast-real",
+    "dataset": "world_gymnast",
+    "intended_metric": "Same AutoEval success means ± standard error as Figure 9",
+    "is_duplicate_of_figure9": true,
+    "current_graphic": "figures/verified_world_gymnast_real_robot.pdf",
+    "distinct_metric_in_current_manuscript": null,
+    "workbook_supports_current_figure": true,
+    "recommended_alternative": {
+      "metric": "Per-task comparison of reported task-success means",
+      "unit": "percent",
+      "definition": "x = SIMPLER mean, y = World-Gymnast mean; annotation = y minus x in percentage points",
+      "plot": "Equal-axis 0–100% plane with y=x parity diagonal, four labeled task points, and descriptive percentage-point differences.",
+      "x": [
+        34,
+        74,
+        32,
+        40
+      ],
+      "y": [
+        58,
+        62,
+        72,
+        78
+      ],
+      "horizontal_se": [
+        7,
+        5,
+        10,
+        10
+      ],
+      "vertical_se": [
+        4,
+        6,
+        10,
+        2
+      ],
+      "values": [
+        24,
+        -12,
+        40,
+        38
+      ],
+      "uncertainty": null,
+      "note": "The x/y marginal SE bars may be shown separately. No joint confidence region or uncertainty on y-x can be inferred without assumptions absent from the workbook. Four task points do not justify correlation or broad superiority claims."
+    }
+  },
+  "original_numeric_workbook_sha256": "db89771e36cd8dd3e4d7cc05017ba6657f8ec2f35c4644dc1e87c388e87f06ba"
+}

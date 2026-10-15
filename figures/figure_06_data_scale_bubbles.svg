@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="515.52" height="234.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 515 234" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="515.52" height="234.0"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-234)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 60,35 L 503,35 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,35 L 60,35 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="32.0" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,64) scale(1,-1)">10¹</text>
+			<path d="M 60,57.571429 L 503,57.571429 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,57.571429 L 60,57.571429 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="54.57142857142857" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,109) scale(1,-1)">10²</text>
+			<path d="M 60,80.142857 L 503,80.142857 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,80.142857 L 60,80.142857 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="77.14285714285714" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,154) scale(1,-1)">10³</text>
+			<path d="M 60,102.714286 L 503,102.714286 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,102.714286 L 60,102.714286 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="99.71428571428571" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,199) scale(1,-1)">10⁴</text>
+			<path d="M 60,125.285714 L 503,125.285714 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,125.285714 L 60,125.285714 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="122.28571428571428" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,244) scale(1,-1)">10⁵</text>
+			<path d="M 60,147.857143 L 503,147.857143 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,147.857143 L 60,147.857143 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="144.85714285714286" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,289) scale(1,-1)">10⁶</text>
+			<path d="M 60,170.428571 L 503,170.428571 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,170.428571 L 60,170.428571 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="167.42857142857142" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,334) scale(1,-1)">10⁷</text>
+			<path d="M 60,193 L 503,193 Z" style="stroke: rgb(88%,89%,90%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<path d="M 57,193 L 60,193 Z" style="stroke: rgb(41%,44%,46%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="39.71484375" y="190.0" style="font-family: Chart; font-size: 8.5px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,380) scale(1,-1)">10⁸</text>
+			<path d="M 60,35 L 60,193 Z" style="stroke: rgb(61%,64%,65%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<g transform=" matrix(0,1,-1,0,17,114)">
+				<text x="-67.03198242187501" y="0" style="font-family: Chart; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,0) scale(1,-1)">Source-reported hours (log scale)</text>
+			</g>
+			<path d="M 250.302817,35 L 250.302817,193 Z" style="stroke: rgb(77%,79%,81%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<path d="M 375.091549,35 L 375.091549,193 Z" style="stroke: rgb(77%,79%,81%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="125.9495488556338" y="219" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,438) scale(1,-1)">Video sources</text>
+			<text x="289.19962450484155" y="219" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,438) scale(1,-1)">Robot data</text>
+			<text x="392.98689205545776" y="219" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,438) scale(1,-1)">Adaptation / ablation</text>
+			<circle cx="94.31690140845072" cy="177.22324847355844" r="22.0" style="stroke: rgb(33%,48%,63%); stroke-linecap: butt; stroke-width: 0.85; fill: rgb(86%,91%,96%); fill-rule: evenodd;"/>
+			<text x="83.09326859595072" y="205.22324847355844" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,410) scale(1,-1)">≈20M</text>
+			<text x="79.46360551001322" y="18" style="font-family: Chart; font-size: 8.1px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,36) scale(1,-1)">Cosmos</text>
+			<text x="70.38738480688822" y="6" style="font-family: Chart; font-size: 7.9px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,12) scale(1,-1)">raw collection</text>
+			<circle cx="156.7112676056338" cy="147.85714285714286" r="19.325314407477237" style="stroke: rgb(30%,50%,46%); stroke-linecap: butt; stroke-width: 0.85; fill: rgb(83%,93%,91%); fill-rule: evenodd;"/>
+			<text x="147.8321172150088" y="173.1824572646201" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,346) scale(1,-1)">&gt;1M</text>
+			<text x="139.15467580875878" y="18" style="font-family: Chart; font-size: 8.1px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,36) scale(1,-1)">V-JEPA 2</text>
+			<text x="138.04713186344628" y="6" style="font-family: Chart; font-size: 7.9px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,12) scale(1,-1)">pretraining</text>
+			<circle cx="219.1056338028169" cy="89.2843910111369" r="12.369459414609596" style="stroke: rgb(51%,43%,58%); stroke-linecap: butt; stroke-width: 0.85; fill: rgb(90%,87%,94%); fill-rule: evenodd;"/>
+			<text x="207.8446474746919" y="107.6538504257465" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,215) scale(1,-1)">2,541</text>
+			<text x="199.9749209121919" y="18" style="font-family: Chart; font-size: 8.1px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,36) scale(1,-1)">Dreamer 4</text>
+			<text x="201.09725977937939" y="6" style="font-family: Chart; font-size: 7.9px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,12) scale(1,-1)">video pool</text>
+			<circle cx="281.5" cy="102.71428571428571" r="14.267194096118123" style="stroke: rgb(69%,50%,33%); stroke-linecap: butt; stroke-width: 0.85; fill: rgb(96%,87%,79%); fill-rule: evenodd;"/>
+			<text x="271.364013671875" y="122.98147981040383" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,245) scale(1,-1)">&gt;10k</text>
+			<text x="276.395263671875" y="18" style="font-family: Chart; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,36) scale(1,-1)">π</text>
+			<text x="281.9481201171875" y="16" style="font-family: Chart; font-size: 6.3px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,32) scale(1,-1)">0</text>
+			<text x="262.8358642578125" y="6" style="font-family: Chart; font-size: 7.9px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,12) scale(1,-1)">pretraining</text>
+			<circle cx="343.8943661971831" cy="69.85182157247766" r="8.93647161716524" style="stroke: rgb(60%,54%,26%); stroke-linecap: butt; stroke-width: 0.85; fill: rgb(94%,92%,77%); fill-rule: evenodd;"/>
+			<text x="336.3863095565581" y="84.7882931896429" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,169) scale(1,-1)">350</text>
+			<text x="330.8445859237456" y="18" style="font-family: Chart; font-size: 8.1px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,36) scale(1,-1)">DROID</text>
+			<text x="332.0385800643706" y="6" style="font-family: Chart; font-size: 7.9px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,12) scale(1,-1)">corpus</text>
+			<circle cx="406.2887323943662" cy="57.57142857142857" r="5.799817049249774" style="stroke: rgb(66%,45%,50%); stroke-linecap: butt; stroke-width: 0.85; fill: rgb(94%,86%,88%); fill-rule: evenodd;"/>
+			<text x="398.7806757537412" y="69.37124562067834" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,138) scale(1,-1)">100</text>
+			<text x="387.15801950374123" y="18" style="font-family: Chart; font-size: 8.1px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,36) scale(1,-1)">Dreamer 4</text>
+			<text x="383.0091913787412" y="6" style="font-family: Chart; font-size: 7.9px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,12) scale(1,-1)">label ablation</text>
+			<circle cx="468.6830985915493" cy="52.88541242010345" r="4.0" style="stroke: rgb(47%,53%,32%); stroke-linecap: butt; stroke-width: 0.85; fill: rgb(88%,91%,81%); fill-rule: evenodd;"/>
+			<text x="461.0497978102993" y="62.88541242010345" style="font-family: Chart-Bold; font-size: 9px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,125) scale(1,-1)">&lt;62</text>
+			<text x="444.1517265212368" y="18" style="font-family: Chart; font-size: 8.1px;fill: rgb(18%,21%,23%); stroke:none;" transform="translate(0,36) scale(1,-1)">V-JEPA 2-AC</text>
+			<text x="446.9465263259243" y="6" style="font-family: Chart; font-size: 7.9px;fill: rgb(41%,44%,46%); stroke:none;" transform="translate(0,12) scale(1,-1)">post-training</text>
+		</g>
+	</g>
+</svg>

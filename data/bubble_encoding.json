@@ -1,0 +1,96 @@
+{
+  "minimum_threshold_hours": 62,
+  "maximum_threshold_hours": 20000000,
+  "radius_range_pt": [
+    4,
+    22
+  ],
+  "area_formula": "pi*(4^2 + (22^2-4^2)*log10(h/62)/log10(20000000/62))",
+  "raw_area_proportional": false,
+  "points": [
+    {
+      "record_id": "cosmos_raw",
+      "hours": 20000000,
+      "bound_type": "approximate",
+      "label": "\u224820M",
+      "x_pt": 94.31690140845072,
+      "y_pt": 177.22324847355844,
+      "radius_pt": 22.0,
+      "area_pt2": 1520.5308443374597,
+      "fill_color": "#DCEAF7",
+      "outline_color": "#567BA1"
+    },
+    {
+      "record_id": "vjepa2_pretrain",
+      "hours": 1000000,
+      "bound_type": "lower_bound",
+      "label": ">1M",
+      "x_pt": 156.7112676056338,
+      "y_pt": 147.85714285714286,
+      "radius_pt": 19.325314407477237,
+      "area_pt2": 1173.2836244118685,
+      "fill_color": "#D6EEE9",
+      "outline_color": "#4F8276"
+    },
+    {
+      "record_id": "dreamer4_video",
+      "hours": 2541,
+      "bound_type": "reported_point",
+      "label": "2,541",
+      "x_pt": 219.1056338028169,
+      "y_pt": 89.2843910111369,
+      "radius_pt": 12.369459414609596,
+      "area_pt2": 480.67475391364513,
+      "fill_color": "#E7DFF2",
+      "outline_color": "#837094"
+    },
+    {
+      "record_id": "pi0_pretrain",
+      "hours": 10000,
+      "bound_type": "lower_bound",
+      "label": ">10k",
+      "x_pt": 281.5,
+      "y_pt": 102.71428571428571,
+      "radius_pt": 14.267194096118123,
+      "area_pt2": 639.4800671028399,
+      "fill_color": "#F6E0CB",
+      "outline_color": "#B18155"
+    },
+    {
+      "record_id": "droid_full",
+      "hours": 350,
+      "bound_type": "reported_point",
+      "label": "350",
+      "x_pt": 343.8943661971831,
+      "y_pt": 69.85182157247766,
+      "radius_pt": 8.93647161716524,
+      "area_pt2": 250.8892385399831,
+      "fill_color": "#F2ECC6",
+      "outline_color": "#998A43"
+    },
+    {
+      "record_id": "dreamer4_actions",
+      "hours": 100,
+      "bound_type": "reported_point",
+      "label": "100",
+      "x_pt": 406.2887323943662,
+      "y_pt": 57.57142857142857,
+      "radius_pt": 5.799817049249774,
+      "area_pt2": 105.67650979381143,
+      "fill_color": "#F1DCE2",
+      "outline_color": "#AA7381"
+    },
+    {
+      "record_id": "vjepa2_ac",
+      "hours": 62,
+      "bound_type": "upper_bound",
+      "label": "<62",
+      "x_pt": 468.6830985915493,
+      "y_pt": 52.88541242010345,
+      "radius_pt": 4.0,
+      "area_pt2": 50.26548245743669,
+      "fill_color": "#E2EACF",
+      "outline_color": "#788953"
+    }
+  ]
+}

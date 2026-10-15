@@ -1,0 +1,7 @@
+source_id,system_or_dataset,title,source_version_date,source_version,source_url,verification_date,verification_status
+cosmos,Cosmos WFM,Cosmos World Foundation Model Platform for Physical AI,2025-07-09,arXiv:2501.03575v3,https://arxiv.org/html/2501.03575,2026-08-26,verified_primary_source
+vjepa2,V-JEPA 2 / V-JEPA 2-AC,"V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",2025-06-11,arXiv:2506.09985v1,https://arxiv.org/html/2506.09985,2026-08-26,verified_primary_source
+pi0,pi_0,pi_0: A Vision-Language-Action Flow Model for General Robot Control,2026-01-08,arXiv:2410.24164v4,https://arxiv.org/html/2410.24164v4,2026-08-26,verified_primary_source
+dreamer4,Dreamer 4,Training Agents Inside of Scalable World Models,2025-09-29,arXiv:2509.24527v1,https://arxiv.org/pdf/2509.24527,2026-08-26,verified_primary_source
+droid,DROID,DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset,2025-04-22,arXiv:2403.12945v2,https://arxiv.org/html/2403.12945v2,2026-08-26,verified_primary_source
+world_gymnast,World-Gymnast,World-Gymnast: Training Robots with Reinforcement Learning in a World Model,2026-02-02,arXiv:2602.02454v1,https://arxiv.org/html/2602.02454v1,2026-08-26,verified_primary_source

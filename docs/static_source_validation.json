@@ -1,0 +1,33 @@
+{
+  "check_type": "Static source validation, not successful TeX compilation",
+  "source_sha256": "24ed8552aa17a7141d44151e7f669f4fad86cd6495ef9a03adc3863b22a13d0b",
+  "structural_errors": [],
+  "missing_cross_references": [],
+  "duplicate_labels": [],
+  "missing_citation_keys": [],
+  "duplicate_bib_keys": [],
+  "missing_figure_files": [],
+  "figure_count": 15,
+  "figure_order": [
+    "figures/timeline.pdf",
+    "figures/paper-roadmap.pdf",
+    "figures/prisma.pdf",
+    "figures/vla-anatomy.pdf",
+    "figures/vla-taxonomy.pdf",
+    "figures/vla-detailed-architecture.pdf",
+    "figures/figure_06_data_scale_bubbles.pdf",
+    "figures/contrast.pdf",
+    "figures/world-model-detailed-architecture.pdf",
+    "figures/wm-taxonomy.pdf",
+    "figures/figure_09_task_slopes.pdf",
+    "figures/figure_10_task_differences.pdf",
+    "figures/selected-evidence-heatmap.pdf",
+    "figures/wm-architectures.pdf",
+    "figures/roadmap.pdf"
+  ],
+  "abstract_words_whitespace": 201,
+  "cited_keys": 186,
+  "bibliography_entries": 203,
+  "old_included_total_present": false,
+  "obsolete_L7_present": false
+}
