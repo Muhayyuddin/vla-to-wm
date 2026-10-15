@@ -327,7 +327,8 @@ PNG previews require Poppler (`pdftoppm`); the PDF and SVG are written without i
 The register, ledger, workbook, figure data, scripts, and documentation in this repository are released under the Creative Commons Attribution 4.0 International license (`LICENSE`). The papers, datasets, and models they describe remain under their own terms.
 
 ## Citing
-'''
+
+```
 @article{din2026reactive,
   author  = {Ud Din, Muhayy and Bakht, Ahsan B. and Yaqoob, Ibrar and Hussain, Irfan},
   title   = {From Reactive Vision-Language-Action Policies to Predictive World Models: A Review for Robotic Manipulation},
@@ -335,4 +336,4 @@ The register, ledger, workbook, figure data, scripts, and documentation in this 
   year    = {2026},
   note    = {Under review.}}
 }
-'''
+```
