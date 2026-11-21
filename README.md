@@ -6,15 +6,6 @@ A survey of **vision-language-action (VLA) models**, **world models**, and **wor
 
 This repository accompanies the review article of the same title by Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob, and Irfan Hussain (submitted to IEEE Access). The review maps 144 reports on the transition from direct action prediction in VLA policies to predictive world models, connects six recurring VLA limitations to candidate world-model mechanisms, and examines whether the reported experiments demonstrate the intended benefit.
 
-**What you will find here**
-
-- A catalogue of VLA models, world models, and world action models with links to the primary papers (RT-2, OpenVLA, π0, GR00T N1, Gemini Robotics, DreamerV3, V-JEPA 2, Cosmos, Genie, DreamGen, WorldVLA, and others).
-- The literature register of 217 screened records, the search log, and the screening counts.
-- A claim-level evidence ledger that links each world-model benefit to the experiment that tested it.
-- The data and scripts behind the paper's quantitative figure and table.
-
-**Keywords:** vision-language-action models, VLA, world models, world action models, WAM, robot foundation models, embodied AI, robotic manipulation, robot learning, generalist robot policies, video prediction, latent dynamics, JEPA, model-based reinforcement learning, manipulation benchmarks, survey, review.
-
 
 ## Contents
 
@@ -340,6 +331,15 @@ python scripts/build_workbook.py         # data/companion_workbook.xlsx
 ```
 
 PNG previews require Poppler (`pdftoppm`); the PDF and SVG are written without it.
+**What you will find here**
+
+- A catalogue of VLA models, world models, and world action models with links to the primary papers (RT-2, OpenVLA, π0, GR00T N1, Gemini Robotics, DreamerV3, V-JEPA 2, Cosmos, Genie, DreamGen, WorldVLA, and others).
+- The literature register of 217 screened records, the search log, and the screening counts.
+- A claim-level evidence ledger that links each world-model benefit to the experiment that tested it.
+- The data and scripts behind the paper's quantitative figure and table.
+
+**Keywords:** vision-language-action models, VLA, world models, world action models, WAM, robot foundation models, embodied AI, robotic manipulation, robot learning, generalist robot policies, video prediction, latent dynamics, JEPA, model-based reinforcement learning, manipulation benchmarks, survey, review.
+
 ## Quick answers
 
 **What is this review about?**  
@@ -374,7 +374,7 @@ Ten directions in five groups: predictive foundations, learning and data, evalua
 
 ## License
 
-The register, ledger, workbook, figure data, scripts, and documentation in this repository are released under the MIT License. The papers, datasets, and models they describe remain under their own terms.
+The register, ledger, workbook, figure data, scripts, and documentation in this repository are released under the MIT License (`LICENSE`). The papers, datasets, and models they describe remain under their own terms.
 
 ## Citing
 

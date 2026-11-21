@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this review or its data, please cite the article below."
 title: "From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation"
 type: dataset
+license: MIT
 url: "https://muhayyuddin.github.io/vla-to-wm/"
 repository-code: "https://github.com/Muhayyuddin/vla-to-wm"
 authors:
