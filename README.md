@@ -15,37 +15,6 @@ This repository accompanies the review article of the same title by Muhayy Ud Di
 
 **Keywords:** vision-language-action models, VLA, world models, world action models, WAM, robot foundation models, embodied AI, robotic manipulation, robot learning, generalist robot policies, video prediction, latent dynamics, JEPA, model-based reinforcement learning, manipulation benchmarks, survey, review.
 
-## Quick answers
-
-**What is this review about?**  
-It is a review of vision-language-action (VLA) models and predictive world models for robotic manipulation. It maps 144 reports and asks whether world models, including world action models, actually address the documented limitations of VLA policies.
-
-**What is a vision-language-action (VLA) model?**  
-A VLA model is a robot policy that maps visual observations and a language instruction directly to robot actions. Examples covered in the review include RT-2, OpenVLA, π0, GR00T N1 and Gemini Robotics.
-
-**What is a world model in robotics?**  
-A world model predicts how a scene will change in response to a robot's actions. A robot can use it to imagine outcomes before acting, to generate training data, or to evaluate a policy without running the real robot.
-
-**What is a world action model (WAM)?**  
-A world action model predicts future observations and robot actions together in one model. Examples covered in the review include WorldVLA, FLARE, Cosmos Policy and DreamZero.
-
-**Do world models make VLA policies better?**  
-In specific respects, yes. Synthetic trajectories from world models raise success on new tasks, and auxiliary future prediction raises policy success. However, physical validity, transfer across evaluation settings and calibrated safety are not yet established, so the evidence does not yet support world models as a general replacement for direct VLA policies.
-
-**Which limitations of VLA models does the review examine?**  
-Six categories: execution monitoring and recovery, distribution shift, data requirements, physical grounding, evaluation validity, and safety and uncertainty.
-
-**How does the review classify world models?**  
-Into six overlapping families: latent dynamics models, generative video models, latent prediction models such as JEPA, physical state models, learned environments for data and evaluation, and world action models.
-
-**How many papers does the review cover?**  
-144 included reports: 69 on VLA systems and analyses, 42 on world-model systems and analyses, and 33 on datasets, benchmarks and evaluation, drawn from reports available by August 2026.
-
-**What is verified imagination?**  
-It is the research direction proposed in the review: a gated interface in which a learned world model's predictions are admitted into a task planner only when support, effect and constraint-margin conditions are met, with runtime assurance as a fallback. It is presented as a research target, without a claimed guarantee.
-
-**What open research directions does the review identify?**  
-Ten directions in five groups: predictive foundations, learning and data, evaluation and deployment, safety and assurance, and verified planning.
 
 ## Contents
 
@@ -371,10 +340,41 @@ python scripts/build_workbook.py         # data/companion_workbook.xlsx
 ```
 
 PNG previews require Poppler (`pdftoppm`); the PDF and SVG are written without it.
+## Quick answers
+
+**What is this review about?**  
+It is a review of vision-language-action (VLA) models and predictive world models for robotic manipulation. It maps 144 reports and asks whether world models, including world action models, actually address the documented limitations of VLA policies.
+
+**What is a vision-language-action (VLA) model?**  
+A VLA model is a robot policy that maps visual observations and a language instruction directly to robot actions. Examples covered in the review include RT-2, OpenVLA, π0, GR00T N1 and Gemini Robotics.
+
+**What is a world model in robotics?**  
+A world model predicts how a scene will change in response to a robot's actions. A robot can use it to imagine outcomes before acting, to generate training data, or to evaluate a policy without running the real robot.
+
+**What is a world action model (WAM)?**  
+A world action model predicts future observations and robot actions together in one model. Examples covered in the review include WorldVLA, FLARE, Cosmos Policy and DreamZero.
+
+**Do world models make VLA policies better?**  
+In specific respects, yes. Synthetic trajectories from world models raise success on new tasks, and auxiliary future prediction raises policy success. However, physical validity, transfer across evaluation settings and calibrated safety are not yet established, so the evidence does not yet support world models as a general replacement for direct VLA policies.
+
+**Which limitations of VLA models does the review examine?**  
+Six categories: execution monitoring and recovery, distribution shift, data requirements, physical grounding, evaluation validity, and safety and uncertainty.
+
+**How does the review classify world models?**  
+Into six overlapping families: latent dynamics models, generative video models, latent prediction models such as JEPA, physical state models, learned environments for data and evaluation, and world action models.
+
+**How many papers does the review cover?**  
+144 included reports: 69 on VLA systems and analyses, 42 on world-model systems and analyses, and 33 on datasets, benchmarks and evaluation, drawn from reports available by August 2026.
+
+**What is verified imagination?**  
+It is the research direction proposed in the review: a gated interface in which a learned world model's predictions are admitted into a task planner only when support, effect and constraint-margin conditions are met, with runtime assurance as a fallback. It is presented as a research target, without a claimed guarantee.
+
+**What open research directions does the review identify?**  
+Ten directions in five groups: predictive foundations, learning and data, evaluation and deployment, safety and assurance, and verified planning.
 
 ## License
 
-The register, ledger, workbook, figure data, scripts, and documentation in this repository are released under the Creative Commons Attribution 4.0 International license (`LICENSE`). The papers, datasets, and models they describe remain under their own terms.
+The register, ledger, workbook, figure data, scripts, and documentation in this repository are released under the MIT License. The papers, datasets, and models they describe remain under their own terms.
 
 ## Citing
 
