@@ -3,8 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>From Reactive VLA Policies to Predictive World Models</title>
-<meta name="description" content="Project page for the IEEE Access review: From Reactive Vision-Language-Action Policies to Predictive World Models — A Review for Robotic Manipulation.">
+<title>VLA Models to World Models: A Review for Robotic Manipulation (Vision-Language-Action, World Action Models)</title>
+<meta name="description" content="Survey of 144 papers on vision-language-action (VLA) models, world models and world action models (WAM) for robotic manipulation: taxonomy, benchmarks, evidence, open problems.">
+<meta name="keywords" content="vision-language-action models, VLA, world models, world action models, WAM, robot foundation models, embodied AI, robotic manipulation, robot learning, generalist robot policies, video prediction, latent dynamics, JEPA, model-based reinforcement learning, manipulation benchmarks, survey, review">
+<meta name="author" content="Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob, Irfan Hussain">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://muhayyuddin.github.io/vla-to-wm/">
+<meta name="citation_title" content="From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation">
+<meta name="citation_author" content="Muhayy Ud Din">
+<meta name="citation_author" content="Ahsan B. Bakht">
+<meta name="citation_author" content="Ibrar Yaqoob">
+<meta name="citation_author" content="Irfan Hussain">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_pdf_url" content="https://muhayyuddin.github.io/vla-to-wm/assets/manuscript.pdf">
+<meta name="citation_abstract_html_url" content="https://muhayyuddin.github.io/vla-to-wm/">
+<meta name="citation_keywords" content="vision-language-action models; VLA; world models; world action models; WAM; robot foundation models; embodied AI; robotic manipulation; robot learning; generalist robot policies; video prediction; latent dynamics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation">
+<meta property="og:description" content="Survey of 144 papers on vision-language-action (VLA) models, world models and world action models (WAM) for robotic manipulation: taxonomy, benchmarks, evidence, open problems.">
+<meta property="og:url" content="https://muhayyuddin.github.io/vla-to-wm/">
+<meta property="og:image" content="https://muhayyuddin.github.io/vla-to-wm/assets/video_poster.jpg">
+<meta property="og:site_name" content="VLA to World Models Review">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation">
+<meta name="twitter:description" content="Survey of 144 papers on vision-language-action (VLA) models, world models and world action models (WAM) for robotic manipulation: taxonomy, benchmarks, evidence, open problems.">
+<meta name="twitter:image" content="https://muhayyuddin.github.io/vla-to-wm/assets/video_poster.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "headline": "From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation", "name": "From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation", "description": "Survey of 144 papers on vision-language-action (VLA) models, world models and world action models (WAM) for robotic manipulation: taxonomy, benchmarks, evidence, open problems.", "keywords": "vision-language-action models, VLA, world models, world action models, WAM, robot foundation models, embodied AI, robotic manipulation, robot learning, generalist robot policies, video prediction, latent dynamics, JEPA, model-based reinforcement learning, manipulation benchmarks, survey, review", "author": [{"@type": "Person", "name": "Muhayy Ud Din"}, {"@type": "Person", "name": "Ahsan B. Bakht"}, {"@type": "Person", "name": "Ibrar Yaqoob"}, {"@type": "Person", "name": "Irfan Hussain"}], "datePublished": "2026", "inLanguage": "en", "url": "https://muhayyuddin.github.io/vla-to-wm/", "sameAs": "https://github.com/Muhayyuddin/vla-to-wm", "about": ["Vision-language-action models", "World models", "Robotic manipulation", "Embodied artificial intelligence"], "image": "https://muhayyuddin.github.io/vla-to-wm/assets/video_poster.jpg", "encoding": {"@type": "MediaObject", "contentUrl": "https://muhayyuddin.github.io/vla-to-wm/assets/manuscript.pdf", "encodingFormat": "application/pdf"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -110,16 +134,18 @@ footer{padding:40px 0 60px;background:var(--navy);color:var(--onnavy2);font-size
 .totop.show{opacity:1}
 details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is this review about?", "acceptedAnswer": {"@type": "Answer", "text": "It is a review of vision-language-action (VLA) models and predictive world models for robotic manipulation. It maps 144 reports and asks whether world models, including world action models, actually address the documented limitations of VLA policies."}}, {"@type": "Question", "name": "What is a vision-language-action (VLA) model?", "acceptedAnswer": {"@type": "Answer", "text": "A VLA model is a robot policy that maps visual observations and a language instruction directly to robot actions. Examples covered in the review include RT-2, OpenVLA, π0, GR00T N1 and Gemini Robotics."}}, {"@type": "Question", "name": "What is a world model in robotics?", "acceptedAnswer": {"@type": "Answer", "text": "A world model predicts how a scene will change in response to a robot's actions. A robot can use it to imagine outcomes before acting, to generate training data, or to evaluate a policy without running the real robot."}}, {"@type": "Question", "name": "What is a world action model (WAM)?", "acceptedAnswer": {"@type": "Answer", "text": "A world action model predicts future observations and robot actions together in one model. Examples covered in the review include WorldVLA, FLARE, Cosmos Policy and DreamZero."}}, {"@type": "Question", "name": "Do world models make VLA policies better?", "acceptedAnswer": {"@type": "Answer", "text": "In specific respects, yes. Synthetic trajectories from world models raise success on new tasks, and auxiliary future prediction raises policy success. However, physical validity, transfer across evaluation settings and calibrated safety are not yet established, so the evidence does not yet support world models as a general replacement for direct VLA policies."}}, {"@type": "Question", "name": "Which limitations of VLA models does the review examine?", "acceptedAnswer": {"@type": "Answer", "text": "Six categories: execution monitoring and recovery, distribution shift, data requirements, physical grounding, evaluation validity, and safety and uncertainty."}}, {"@type": "Question", "name": "How does the review classify world models?", "acceptedAnswer": {"@type": "Answer", "text": "Into six overlapping families: latent dynamics models, generative video models, latent prediction models such as JEPA, physical state models, learned environments for data and evaluation, and world action models."}}, {"@type": "Question", "name": "How many papers does the review cover?", "acceptedAnswer": {"@type": "Answer", "text": "144 included reports: 69 on VLA systems and analyses, 42 on world-model systems and analyses, and 33 on datasets, benchmarks and evaluation, drawn from reports available by August 2026."}}, {"@type": "Question", "name": "What is verified imagination?", "acceptedAnswer": {"@type": "Answer", "text": "It is the research direction proposed in the review: a gated interface in which a learned world model's predictions are admitted into a task planner only when support, effect and constraint-margin conditions are met, with runtime assurance as a fallback. It is presented as a research target, without a claimed guarantee."}}, {"@type": "Question", "name": "What open research directions does the review identify?", "acceptedAnswer": {"@type": "Answer", "text": "Ten directions in five groups: predictive foundations, learning and data, evaluation and deployment, safety and assurance, and verified planning."}}, {"@type": "Question", "name": "Where are the data and the list of models?", "acceptedAnswer": {"@type": "Answer", "text": "The literature register, evidence ledger, search log and a catalogue of VLA models and world models with links to the primary papers are in the GitHub repository at https://github.com/Muhayyuddin/vla-to-wm."}}, {"@type": "Question", "name": "How should I cite this review?", "acceptedAnswer": {"@type": "Answer", "text": "Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob and Irfan Hussain, \"From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation,\" submitted to IEEE Access, 2026."}}]}</script>
+<link rel="alternate" type="text/markdown" href="llms.txt" title="Plain-text summary for AI assistants">
 </head>
 <body>
 <nav><div class="wrap"><a class="brand" href="#top">VLA → World Models</a><a href="#abstract">Abstract</a><a href="#video">Video</a><a href="#architectures">Architectures</a><a href="#taxonomy">Taxonomy</a><a href="#evidence">Evidence</a><a href="#data">Data</a><a href="#directions">Directions</a><a href="#catalogue">Catalogue</a><a href="#files">Files</a><a href="#cite">Cite</a></div></nav>
 
 <header class="hero" id="top"><div class="wrap">
 <div class="kicker">IEEE Access · Review article · Robotic manipulation</div>
-<h1>From Reactive Vision–Language–Action Policies to Predictive World Models</h1>
-<div class="sub">A review for robotic manipulation</div>
+<h1>From Reactive Vision-Language-Action Models to Predictive World Models</h1>
+<div class="sub">A review of VLA models, world models and world action models for robotic manipulation</div>
 <div class="authors"><span>Muhayy Ud Din</span>, <span>Ahsan B. Bakht</span>, <span>Ibrar Yaqoob</span>, <span>Irfan Hussain</span></div>
-<div class="affil">KUCARS, Khalifa University, Abu Dhabi · Charles Sturt University, Australia</div>
+<div class="affil">RAS-HCT, Higher Colleges of Technology, Abu Dhabi · KUCARS, Khalifa University, Abu Dhabi · Charles Sturt University, Australia</div>
 <div class="btns">
 <a class="btn primary" href="assets/manuscript.pdf"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>Paper (PDF)</a>
 <a class="btn" href="https://github.com/Muhayyuddin/vla-to-wm"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.5V22"/></svg>Code &amp; data</a>
@@ -142,7 +168,8 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 
 <section id="abstract"><div class="wrap">
 <h2>Abstract</h2>
-<p class="lead reveal" style="text-align:justify;hyphens:auto">Vision-language-action (VLA) policies map visual observations and language instructions to robot actions. Establishing their reliability requires evidence beyond benchmark performance, particularly during physical interaction and under distribution shift. Predictive world models can improve reliability by supporting the prediction of action outcomes, but evaluation gaps leave their effectiveness unclear. In this paper, we review the transition from direct action prediction to predictive world models for robotic manipulation by mapping 144 reports. We organize VLA systems and predictive mechanisms, distinguish observed limitations from evaluation gaps, and assess the evidence across six categories: execution monitoring and recovery, distribution shift, data requirements, physical grounding, evaluation validity, and safety and uncertainty. Selected manipulation comparisons support synthetic-trajectory augmentation and auxiliary predictive training. Learned practice and candidate-action comparison show promise in narrower experiments, while physical validity, transfer across evaluation settings, and calibrated safety remain insufficiently established. We interpret these findings within their original tasks, baselines, and computational settings. We identify research directions in prediction for control, stable representations, data composition, functional evaluation, and dependable deployment, and we propose verified imagination, which integrates learned dynamics with explicit planning constraints and runtime assurance. This review is intended for researchers and practitioners in robot learning, embodied AI, and manipulation planning who need to judge when predictive world models can be expected to improve the reliability of VLA policies, and on what evidence.</p>
+<p class="lead reveal" style="text-align:justify;hyphens:auto">Vision-language-action (VLA) policies map visual observations and language instructions to robot actions. Establishing their reliability requires evidence beyond benchmark performance, particularly during physical interaction and under distribution shift. Predictive world models are proposed as a remedy, but the supporting evidence is unclear. We review direct action prediction and predictive world models for robotic manipulation by mapping 144 reports. We organize VLA systems and predictive mechanisms and assess the evidence across six limitation categories: execution monitoring and recovery, distribution shift, data requirements, physical grounding, evaluation validity, and safety and uncertainty. For each category, we separate evidence that a limitation exists from evidence that a predictive mechanism addresses it. The evidence shows that predictive world models, including world-action models, improve specific aspects of manipulation. For example, synthetic trajectories raise success on new tasks, and auxiliary future prediction raises policy success. However, physical validity, transfer across evaluation settings, and calibrated safety remain insufficiently established, so the evidence does not yet support these models as a general replacement for direct policies. We identify ten research directions in five groups: predictive foundations, learning and data, evaluation and deployment, safety and assurance, and verified planning. For the last group, we formulate verified imagination, a gated interface between learned dynamics, planner predicates, and runtime assurance, as a research target with a worked example and no claimed guarantee. This review is intended for researchers and practitioners in robot learning, embodied AI, and manipulation planning.</p>
+<p class="muted reveal"><strong>Keywords:</strong> vision-language-action (VLA) models · world models · world action models (WAM) · robot foundation models · embodied AI · robotic manipulation · robot learning · generalist robot policies · video prediction · latent dynamics · JEPA · manipulation benchmarks · survey</p>
 <h3>Four questions organize the paper</h3>
 <div class="cards">
 <div class="card reveal" style="--c:var(--vla)"><h4>RQ1 · Systems</h4><p>Which VLA systems have been proposed for manipulation, and which problems do they address?</p></div>
@@ -159,19 +186,19 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 </div></section>
 
 <section id="architectures"><div class="wrap">
-<h2>Representative architectures</h2>
+<h2>VLA and world-model architectures</h2>
 <p class="lead">A <b>reactive policy interface</b> selects actions without exposing an action-conditioned transition model. A <b>world model</b> predicts how state changes under a supplied action. A <b>world-action model</b> combines both in a shared architecture — which does not by itself demonstrate search over alternative actions.</p>
 <div class="cols">
-<figure class="fig reveal"><a href="assets/vla-detailed-architecture.png" class="zoom"><img src="assets/vla-detailed-architecture.png" alt="Detailed VLA architecture"></a><figcaption><b>Representative VLA policy.</b> (a) Training from demonstrations; (b) deployment: images, language and optional proprioception form a context for one of three action heads (tokens, regression, diffusion/flow); a prefix of the chunk is executed before observations refresh.</figcaption></figure>
-<figure class="fig reveal"><a href="assets/world-model-detailed-architecture.png" class="zoom"><img src="assets/world-model-detailed-architecture.png" alt="Detailed world-model architecture"></a><figcaption><b>Representative action-conditioned world model.</b> (a) Training on observed transitions; (b) prediction for a supplied action; (c) one model-based planning loop in which task goals guide scoring and candidate actions condition dynamics. Observation, outcome and uncertainty heads are optional.</figcaption></figure>
+<figure class="fig reveal"><a href="assets/vla-detailed-architecture.png" class="zoom"><img src="assets/vla-detailed-architecture.png" alt="Architecture of a vision-language-action (VLA) model for robotic manipulation"></a><figcaption><b>Representative VLA policy.</b> (a) Training from demonstrations; (b) deployment: images, language and optional proprioception form a context for one of three action heads (tokens, regression, diffusion/flow); a prefix of the chunk is executed before observations refresh.</figcaption></figure>
+<figure class="fig reveal"><a href="assets/world-model-detailed-architecture.png" class="zoom"><img src="assets/world-model-detailed-architecture.png" alt="Architecture of a predictive world model for robot learning"></a><figcaption><b>Representative action-conditioned world model.</b> (a) Training on observed transitions; (b) prediction for a supplied action; (c) one model-based planning loop in which task goals guide scoring and candidate actions condition dynamics. Observation, outcome and uncertainty heads are optional.</figcaption></figure>
 </div>
-<figure class="fig reveal" style="margin-top:22px"><a href="assets/contrast.png" class="zoom"><img src="assets/contrast.png" alt="Three control interfaces"></a><figcaption><b>Three control interfaces.</b> (a) Direct policy: fast, blind to consequences. (b) Planning through a model: candidate actions are tried in imagination first. (c) Unified world-action model: one network predicts and acts; what it exposes depends on the design.</figcaption></figure>
+<figure class="fig reveal" style="margin-top:22px"><a href="assets/contrast.png" class="zoom"><img src="assets/contrast.png" alt="Reactive VLA policy, world-model planning and world action model compared"></a><figcaption><b>Three control interfaces.</b> (a) Direct policy: fast, blind to consequences. (b) Planning through a model: candidate actions are tried in imagination first. (c) Unified world-action model: one network predicts and acts; what it exposes depends on the design.</figcaption></figure>
 </div></section>
 
 <section id="taxonomy"><div class="wrap">
-<h2>Taxonomy used in the paper</h2>
+<h2>Taxonomy of VLA models and world models</h2>
 <p class="lead">VLA groups describe design choices and practical challenges rather than mutually exclusive architecture classes. The predictive-system taxonomy separates <i>what</i> is predicted (WM1–WM4) from <i>how</i> prediction participates in a larger system (WM5–WM6).</p>
-<figure class="fig reveal"><a href="assets/vla-taxonomy.png" class="zoom"><img src="assets/vla-taxonomy.png" alt="VLA taxonomy"></a><figcaption>Problem-oriented VLA taxonomy. ° open weights, • closed or vendor-reported; FAST is a tokenizer rather than a VLA.</figcaption></figure>
+<figure class="fig reveal"><a href="assets/vla-taxonomy.png" class="zoom"><img src="assets/vla-taxonomy.png" alt="Taxonomy of vision-language-action (VLA) models"></a><figcaption>Problem-oriented VLA taxonomy. ° open weights, • closed or vendor-reported; FAST is a tokenizer rather than a VLA.</figcaption></figure>
 <div class="scrollx reveal"><table class="tbl "><thead><tr><th>Group</th><th>Focus</th><th>Question for the reader</th></tr></thead><tbody>
 <tr><td>A — Action tokens</td><td>Discrete representations and action-sequence decoding</td><td>How are continuous robot actions represented and generated?</td></tr>
 <tr><td>B — Continuous actions</td><td>Continuous regression, diffusion or flow-based action generation and action chunks</td><td>How does the policy generate precise, multimodal motion?</td></tr>
@@ -181,7 +208,7 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 <tr><td>F — Efficient deployment</td><td>Smaller models, caching, pruning, and faster decoding</td><td>What computation is required at inference time?</td></tr>
 <tr><td>G — Embodiment</td><td>Transfer across robots, dexterous control, and mobile manipulation</td><td>How does the policy accommodate different bodies and control interfaces?</td></tr>
 </tbody></table></div>
-<figure class="fig reveal" style="margin-top:28px"><a href="assets/wm-taxonomy.png" class="zoom"><img src="assets/wm-taxonomy.png" alt="World-model taxonomy"></a><figcaption>Overlapping functional families of predictive systems. Belonging to a family does not prove a system fixes a VLA weakness.</figcaption></figure>
+<figure class="fig reveal" style="margin-top:28px"><a href="assets/wm-taxonomy.png" class="zoom"><img src="assets/wm-taxonomy.png" alt="Taxonomy of world models for robot learning: six families"></a><figcaption>Overlapping functional families of predictive systems. Belonging to a family does not prove a system fixes a VLA weakness.</figcaption></figure>
 <div class="scrollx reveal"><table class="tbl "><thead><tr><th>Family</th><th>Main role</th><th>Important distinction</th></tr></thead><tbody>
 <tr><td>WM1 — Latent dynamics</td><td>Predict compact state transitions for planning or learning in imagination</td><td>A useful control model need not reconstruct every image detail.</td></tr>
 <tr><td>WM2 — Generative video</td><td>Generate future observations or interactive visual environments</td><td>Visual plausibility is not sufficient evidence of correct contact dynamics.</td></tr>
@@ -193,7 +220,7 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 </div></section>
 
 <section id="evidence"><div class="wrap">
-<h2>What the evidence supports</h2>
+<h2>What the evidence supports for world models in manipulation</h2>
 <p class="lead">The paper separates evidence that a limitation <i>exists</i> from evidence that a proposed mechanism <i>improves</i> it. <b>Direct</b>, <b>indirect</b> and <b>prospective</b> describe the claim–evidence relation; <b>favorable</b>, <b>adverse</b>, <b>mixed</b> describe outcome direction. A high task-success score alone does not establish why a system improved.</p>
 <h3>Six limitations and the outcome each examines</h3>
 <div class="scrollx reveal"><table class="tbl "><thead><tr><th>Limitation</th><th>Outcome or gap examined</th></tr></thead><tbody>
@@ -206,19 +233,19 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 </tbody></table></div>
 <h3>Limitation → candidate mechanism → mechanism-effect evidence</h3>
 <p class="muted">Mechanisms remain candidates rather than established remedies. Labels describe claims, not whole papers, and are not certainty grades.</p>
-<div class="scrollx reveal"><table class="tbl matrix"><thead><tr><th>VLA limitation</th><th>Candidate predictive mechanism</th><th>Family · representative systems</th><th>Mechanism-effect evidence</th></tr></thead><tbody>
+<div class="scrollx reveal"><table class="tbl matrix"><thead><tr><th>Limitation category</th><th>Candidate predictive mechanism</th><th>Family · representative systems</th><th>Mechanism-effect evidence</th></tr></thead><tbody>
 <tr><td><span class="tag" style="--c:#34618E">L1</span> <b>Execution monitoring and recovery</b></td><td>Action-conditioned prediction and outcome monitoring</td><td><span class="chip">WM6</span><br><span class="muted">WorldVLA; Cosmos Policy</span></td><td><span class="ev" style="--c:#B07A2A">Indirect</span><br><span class="muted">Task-success or completion gains do not isolate error detection, recovery latency, or correction after an imposed failure.</span></td></tr>
 <tr><td><span class="tag" style="--c:#34618E">L2</span> <b>Distribution shift</b></td><td>Learned practice environments</td><td><span class="chip">WM5</span><br><span class="muted">World-Gymnast</span></td><td><span class="ev" style="--c:#3A7D44">Direct, package-level, mixed</span><br><span class="muted">Physical held-out-task transfer is measured (3 of 4 tasks favour the learned environment); no single shift-handling component is isolated.</span></td></tr>
-<tr><td><span class="tag" style="--c:#34618E">L3</span> <b>Data requirements</b></td><td>Synthetic trajectories and video pretraining</td><td><span class="chip">WM2 / WM3 / WM5</span><br><span class="muted">DreamGen; V-JEPA 2 / 2-AC</span></td><td><span class="ev" style="--c:#3A7D44">Direct for the synthetic-data pipeline</span><br><span class="muted">DreamGen reports 11.2 % → 43.2 % on new behaviours and 0 % → 28.5 % on new environments (task scores, not robot-hour equivalence). Passive-video substitution remains indirect.</span></td></tr>
-<tr><td><span class="tag" style="--c:#34618E">L4</span> <b>Physical grounding</b></td><td>Physical-state prediction and contact-aware representations</td><td><span class="chip">WM4</span><br><span class="muted">TesserAct; GWM</span></td><td><span class="ev" style="--c:#B07A2A">Indirect / prospective</span><br><span class="muted">Video benchmarks do not measure VLA control; selected comparisons do not isolate gains from mass, friction, or contact prediction.</span></td></tr>
-<tr><td><span class="tag" style="--c:#34618E">L5</span> <b>Evaluation validity</b></td><td>Learned simulators and policy evaluators</td><td><span class="chip">WM5</span><br><span class="muted">Ctrl-World; GE-Sim; WorldEval</span></td><td><span class="ev" style="--c:#9E4A3F">Direct, adverse</span><br><span class="muted">PolaRiS compares the tested Ctrl-World evaluation pipeline with physical outcomes and finds hallucinated interactions and policy mis-ranking.</span></td></tr>
+<tr><td><span class="tag" style="--c:#34618E">L3</span> <b>Data requirements</b></td><td>Synthetic trajectories and video pretraining</td><td><span class="chip">WM2 / WM3 / WM5</span><br><span class="muted">DreamGen; Ctrl-World; V-JEPA 2 / 2-AC</span></td><td><span class="ev" style="--c:#3A7D44">Direct for the synthetic-data pipeline</span><br><span class="muted">DreamGen reports 11.2 % → 43.2 % on new behaviours and 0 % → 28.5 % on new environments (task scores, not robot-hour equivalence). Ctrl-World reports 38.7 % → 83.4 % after fine-tuning π<sub>0.5</sub> on human-filtered synthetic successes. Passive-video substitution remains indirect.</span></td></tr>
+<tr><td><span class="tag" style="--c:#34618E">L4</span> <b>Physical grounding</b></td><td>Physical-state prediction and contact-aware representations</td><td><span class="chip">WM4</span><br><span class="muted">TesserAct; GWM</span></td><td><span class="ev" style="--c:#B07A2A">Indirect / prospective</span><br><span class="muted">Video benchmarks do not measure VLA control. TesserAct and GWM report task-success gains, and neither varies mass, friction, or contact.</span></td></tr>
+<tr><td><span class="tag" style="--c:#34618E">L5</span> <b>Evaluation validity</b></td><td>Learned simulators and policy evaluators</td><td><span class="chip">WM5</span><br><span class="muted">Ctrl-World; GE-Sim; WorldEval</span></td><td><span class="ev" style="--c:#B07A2A">Direct; favorable when self-reported, adverse in the independent test</span><br><span class="muted">MMRV against real-robot outcomes (lower is better): 0.044 for WorldEval in its own validation; 0.22 for the Ctrl-World pipeline as tested independently by PolaRiS, with hallucinated interactions.</span></td></tr>
 <tr><td><span class="tag" style="--c:#34618E">L6</span> <b>Safety and uncertainty</b></td><td>Consequence and uncertainty estimates with runtime protection</td><td><span class="chip">WM6 (prospective WM4)</span><br><span class="muted">Cosmos Policy; safety benchmarks</span></td><td><span class="ev" style="--c:#6A7179">Prospective</span><br><span class="muted">Task-value prediction does not establish calibrated violation risk or irreversibility estimates; dedicated safety outcomes are needed.</span></td></tr>
 </tbody></table></div>
 <h3>Synthesis</h3>
 <div class="cards">
-<div class="card reveal" style="--c:var(--good)"><h4>Supported</h4><p>Synthetic-trajectory augmentation and auxiliary predictive training improve policies in the selected manipulation comparisons.</p></div>
+<div class="card reveal" style="--c:var(--good)"><h4>Supported</h4><p>Predictive world models, including world-action models, improve specific aspects of manipulation: synthetic trajectories raise success on new tasks, and auxiliary future prediction raises policy success.</p></div>
 <div class="card reveal" style="--c:var(--warn)"><h4>Promising, but narrow</h4><p>Learned practice environments (World-Gymnast: 3 of 4 real-robot tasks) and candidate-action comparison (Cosmos Policy, package-level) show gains in narrower experiments.</p></div>
-<div class="card reveal" style="--c:var(--wm)"><h4>Still open</h4><p>Physical validity, transfer across evaluation settings and calibrated safety. PolaRiS shows a learned evaluator can mis-rank policies relative to physical outcomes.</p></div>
+<div class="card reveal" style="--c:var(--wm)"><h4>Still open</h4><p>Physical validity, transfer across evaluation settings and calibrated safety. Learned evaluators look favorable in self-reported validations, but the one independent test found policy mis-ranking. The evidence does not yet support predictive models as a general replacement for direct policies.</p></div>
 <div class="card reveal" style="--c:var(--ink)"><h4>Cost counts end-to-end</h4><p>Prediction and search must be judged against the full observation-to-command deadline, not model inference time alone.</p></div>
 </div>
 </div></section>
@@ -227,8 +254,8 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 <h2>Verified quantitative data</h2>
 <p class="lead">Two datasets feed the figures: seven source-reported data-scale records and four World-Gymnast task comparisons, checked against version-specific primary sources and kept with their original bounds. Records describe different populations and learning stages; they should not be summed or used to rank sample efficiency.</p>
 <div class="cols">
-<figure class="fig reveal"><a href="assets/figure_06_data_scale_bubbles.png" class="zoom"><img src="assets/figure_06_data_scale_bubbles.png" alt="Data scale bubbles"></a><figcaption>Source-reported data scales on a logarithmic hours axis. Circle area grows with log(hours); areas are not proportional to raw hours. ≈ approximation, &gt; lower bound, &lt; upper bound.</figcaption></figure>
-<figure class="fig reveal"><a href="assets/figure_09_task_slopes.png" class="zoom"><img src="assets/figure_09_task_slopes.png" alt="World-Gymnast task slopes"></a><figcaption>AutoEval real-robot task success after RL in SIMPLER versus the World-Gymnast learned environment (mean ± SE over five evaluation repeats of 10 trials).</figcaption></figure>
+<figure class="fig reveal"><a href="assets/figure_07_data_scale.png" class="zoom"><img src="assets/figure_07_data_scale.png" alt="Training data scale of VLA models and world models in hours"></a><figcaption>Source-reported data scales as labelled points on a logarithmic hours axis. ≈ approximation, &gt; lower bound, &lt; upper bound. Scopes differ, so no sample-efficiency ranking is implied.</figcaption></figure>
+<div class="scrollx reveal"><table class="tbl "><thead><tr><th>Task (real-robot success, %, mean ± SE; 10 trials repeated five times)</th><th>SIMPLER</th><th>World-Gymnast</th><th>Δ (points)</th></tr></thead><tbody><tr><td>Open the drawer</td><td class=num>34 ± 7</td><td class=num>58 ± 4</td><td class=num>+24</td></tr><tr><td>Close the drawer</td><td class=num>74 ± 5</td><td class=num>62 ± 6</td><td class=num>−12</td></tr><tr><td>Eggplant into the blue sink</td><td class=num>32 ± 10</td><td class=num>72 ± 10</td><td class=num>+40</td></tr><tr><td>Eggplant into the yellow basket</td><td class=num>40 ± 10</td><td class=num>78 ± 2</td><td class=num>+38</td></tr></tbody></table></div>
 </div>
 <h3>Data scale and reporting role (hours)</h3>
 <div class="scrollx reveal"><table class="tbl "><thead><tr><th>System / record</th><th>Hours</th><th>Type</th><th>What the number represents</th><th>Primary source and locator</th></tr></thead><tbody>
@@ -252,22 +279,22 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 
 <section id="directions"><div class="wrap">
 <h2>Ten research directions, ending in verified imagination</h2>
-<p class="lead">Five lanes (data → safety) and four readiness stages (foundations → deployment). The highlight cycles through D1–D10; click a direction to pin it.</p>
-<div class="roadmap reveal"><img src="assets/roadmap.png" alt="Research roadmap D1–D10"><div class="hl" id="hl"></div></div>
+<p class="lead">Five lanes, one per group of directions: predictive foundations, learning and data, evaluation and deployment, safety and assurance, and verified planning. Arrows mark proposed dependencies. The highlight cycles through D1–D10; click a direction to pin it.</p>
+<div class="roadmap reveal"><img src="assets/roadmap.png" alt="Research roadmap for world models and VLA models: ten directions"><div class="hl" id="hl"></div></div>
 <div class="dlist" id="dlist"></div>
-<h3>Themes and the evidence each needs</h3>
-<div class="scrollx reveal"><table class="tbl "><thead><tr><th>Theme</th><th>Directions</th><th>Evidence needed</th></tr></thead><tbody>
+<h3>Groups and the evidence each needs</h3>
+<div class="scrollx reveal"><table class="tbl "><thead><tr><th>Group</th><th>Directions</th><th>Evidence needed</th></tr></thead><tbody>
 <tr><td>Predictive foundations</td><td>D1 unified prediction/action; D2 control-oriented objectives; D3 stable memory; D4 contact-aware state</td><td>Matched ablations that connect better predictions to better physical decisions, including behavior under occlusion and contact.</td></tr>
 <tr><td>Learning and data</td><td>D5 imagined post-training; D6 data composition</td><td>Transfer studies that hold training conditions fixed and report data provenance, mixing ratios, and failure cases.</td></tr>
 <tr><td>Evaluation and deployment</td><td>D7 evaluation validity; D8 efficient deliberation</td><td>Physical policy-ranking checks, versioned protocols, uncertainty reporting, and separate measurements of planning latency and control frequency.</td></tr>
 <tr><td>Safety and assurance</td><td>D9 risk-aware control</td><td>Calibrated uncertainty, constraint-violation and irreversibility measures, abstention, and tested fallback behavior.</td></tr>
 <tr><td>Verified planning</td><td>D10 verified imagination</td><td>Explicit state and predicate mappings, bounded model error within a declared operating region, and runtime checks for unsupported actions.</td></tr>
 </tbody></table></div>
-<p class="muted"><b>Verified imagination</b> is the paper's proposed direction: integrate learned prediction with explicit constraints and runtime assurance. It is not a capability established by the current collection.</p>
+<p class="muted"><b>Verified imagination</b> is formulated in the paper as a gated interface: a planner operator and its proposed action are admitted only if the state is inside the validated region (support), the predicted effects hold with a calibrated probability (effect), and all predicted states keep a constraint margin. It is a research target with a worked example; no system is evaluated and no guarantee is claimed.</p><figure class="fig reveal"><a href="assets/verified-imagination.png" class="zoom"><img src="assets/verified-imagination.png" alt="Verified imagination: gated interface between a learned world model, a task planner and runtime assurance"></a><figcaption>Verified-imagination interface (D10): task planner, action proposal, world-model rollouts, abstraction to planner predicates, gate, and execution under a runtime monitor that does not depend on the world model.</figcaption></figure>
 </div></section>
 
 <section id="catalogue"><div class="wrap">
-<h2>Model catalogue</h2>
+<h2>Model catalogue: VLA models and world models</h2>
 <p class="lead">A reading guide, not a ranking or a count of included reports: <b>74 policy rows, 55 predictive-system rows, 31 related-method rows</b>. Hybrid predictive policies deliberately appear in both main tables. "VLA" uses the broad interface criterion (visual observations + language → robot actions); earlier language-conditioned policies are labelled as precursors.</p>
 <div class="tabs"><button class="on" data-pane="p-vla">VLA policies (74)</button><button data-pane="p-wm">World models &amp; predictive systems (55)</button><button data-pane="p-rel">Related methods &amp; context (31)</button></div>
 <input class="search" id="catsearch" type="search" placeholder="Filter rows — e.g. diffusion, Franka, latent, Genie…">
@@ -459,12 +486,40 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 </div>
 </div></section>
 
+<section id="faq"><div class="wrap">
+<h2>Quick answers: VLA models and world models for robotic manipulation</h2>
+<h3>What is this review about?</h3>
+<p>It is a review of vision-language-action (VLA) models and predictive world models for robotic manipulation. It maps 144 reports and asks whether world models, including world action models, actually address the documented limitations of VLA policies.</p>
+<h3>What is a vision-language-action (VLA) model?</h3>
+<p>A VLA model is a robot policy that maps visual observations and a language instruction directly to robot actions. Examples covered in the review include RT-2, OpenVLA, π0, GR00T N1 and Gemini Robotics.</p>
+<h3>What is a world model in robotics?</h3>
+<p>A world model predicts how a scene will change in response to a robot&#x27;s actions. A robot can use it to imagine outcomes before acting, to generate training data, or to evaluate a policy without running the real robot.</p>
+<h3>What is a world action model (WAM)?</h3>
+<p>A world action model predicts future observations and robot actions together in one model. Examples covered in the review include WorldVLA, FLARE, Cosmos Policy and DreamZero.</p>
+<h3>Do world models make VLA policies better?</h3>
+<p>In specific respects, yes. Synthetic trajectories from world models raise success on new tasks, and auxiliary future prediction raises policy success. However, physical validity, transfer across evaluation settings and calibrated safety are not yet established, so the evidence does not yet support world models as a general replacement for direct VLA policies.</p>
+<h3>Which limitations of VLA models does the review examine?</h3>
+<p>Six categories: execution monitoring and recovery, distribution shift, data requirements, physical grounding, evaluation validity, and safety and uncertainty.</p>
+<h3>How does the review classify world models?</h3>
+<p>Into six overlapping families: latent dynamics models, generative video models, latent prediction models such as JEPA, physical state models, learned environments for data and evaluation, and world action models.</p>
+<h3>How many papers does the review cover?</h3>
+<p>144 included reports: 69 on VLA systems and analyses, 42 on world-model systems and analyses, and 33 on datasets, benchmarks and evaluation, drawn from reports available by August 2026.</p>
+<h3>What is verified imagination?</h3>
+<p>It is the research direction proposed in the review: a gated interface in which a learned world model&#x27;s predictions are admitted into a task planner only when support, effect and constraint-margin conditions are met, with runtime assurance as a fallback. It is presented as a research target, without a claimed guarantee.</p>
+<h3>What open research directions does the review identify?</h3>
+<p>Ten directions in five groups: predictive foundations, learning and data, evaluation and deployment, safety and assurance, and verified planning.</p>
+<h3>Where are the data and the list of models?</h3>
+<p>The literature register, evidence ledger, search log and a catalogue of VLA models and world models with links to the primary papers are in the GitHub repository at https://github.com/Muhayyuddin/vla-to-wm.</p>
+<h3>How should I cite this review?</h3>
+<p>Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob and Irfan Hussain, &quot;From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation,&quot; submitted to IEEE Access, 2026.</p>
+</div></section>
+
 <section id="cite"><div class="wrap">
-<h2>Cite</h2>
+<h2>Cite this review</h2>
 <p class="lead">Please cite the original papers when using a model, result, dataset or protocol; the catalogue links to primary sources. For this synthesis, use the manuscript title and its final bibliographic record when available.</p>
 <pre id="bib">@article{din2026reactive,
-  title   = {From Reactive Vision-Language-Action Policies to Predictive World Models: A Review for Robotic Manipulation},
-  author  = {Din, Muhayy Ud and Bakht, Ahsan B. and Yaqoob, Ibrar and Hussain, Irfan},
+  title   = {From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation},
+  author  = {Ud Din, Muhayy and Bakht, Ahsan B. and Yaqoob, Ibrar and Hussain, Irfan},
   journal = {IEEE Access},
   year    = {2026},
   note    = {Under review. Companion materials: https://github.com/Muhayyuddin/vla-to-wm}
@@ -472,12 +527,12 @@ details summary{cursor:pointer;font-weight:500;color:var(--vla)}
 <a class="btn" href="#" id="copybib">Copy BibTeX</a>
 </div></section>
 
-<footer><div class="wrap">© 2026 Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob, Irfan Hussain · KUCARS, Khalifa University. Linked papers, third-party figures, code, datasets and weights retain their respective terms.</div></footer>
+<footer><div class="wrap">© 2026 Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob, Irfan Hussain · RAS-HCT, Higher Colleges of Technology · KUCARS, Khalifa University · Charles Sturt University. Linked papers, third-party figures, code, datasets and weights retain their respective terms.</div></footer>
 <a class="totop" href="#top" id="totop" aria-label="Back to top">↑</a>
 <div class="lightbox" id="lb"><img alt=""></div>
 
 <script>
-const DBOX=[{"d": 1, "l": 5.14, "t": 59.48, "w": 22.08, "h": 12.56, "label": "Unified prediction and action"}, {"d": 2, "l": 5.14, "t": 21.61, "w": 22.08, "h": 13.24, "label": "Control-oriented objectives and metrics"}, {"d": 3, "l": 28.97, "t": 59.14, "w": 22.08, "h": 13.24, "label": "Stable memory over long horizons"}, {"d": 4, "l": 52.8, "t": 59.14, "w": 22.08, "h": 13.24, "label": "Contact-aware physical state"}, {"d": 5, "l": 5.14, "t": 40.45, "w": 22.08, "h": 13.09, "label": "Imagined post-training (world-model-based RL)"}, {"d": 6, "l": 5.14, "t": 75.83, "w": 22.08, "h": 17.41, "label": "Data composition: real / passive / synthetic provenance"}, {"d": 7, "l": 28.97, "t": 21.95, "w": 22.08, "h": 12.56, "label": "Evaluation validity: sim-to-real verdict transfer"}, {"d": 8, "l": 52.8, "t": 40.71, "w": 22.08, "h": 12.56, "label": "Efficient deliberation at control rate"}, {"d": 9, "l": 28.97, "t": 1.1, "w": 22.08, "h": 16.69, "label": "Risk-aware control: uncertainty, irreversibility, fallback"}, {"d": 10, "l": 76.63, "t": 0.76, "w": 22.08, "h": 17.41, "label": "Verified imagination: certified envelopes around learned dynamics + TAMP"}];
+const DBOX=[{"d": 1, "l": 6.64, "t": 84.47, "w": 20.78, "h": 10.95, "label": "Unified prediction and action"}, {"d": 2, "l": 30.23, "t": 84.1, "w": 20.78, "h": 11.69, "label": "Control-oriented objectives"}, {"d": 3, "l": 53.82, "t": 84.1, "w": 20.78, "h": 11.69, "label": "Stable memory over long horizons"}, {"d": 4, "l": 77.4, "t": 84.1, "w": 20.78, "h": 11.69, "label": "Contact-aware physical state"}, {"d": 5, "l": 13.56, "t": 64.21, "w": 30.52, "h": 11.53, "label": "Imagined post-training (world-model-based RL)"}, {"d": 6, "l": 60.74, "t": 64.13, "w": 30.52, "h": 11.69, "label": "Data composition: real / passive / synthetic"}, {"d": 7, "l": 13.56, "t": 44.17, "w": 30.52, "h": 11.67, "label": "Evaluation validity: real-robot ranking preserved?"}, {"d": 8, "l": 60.74, "t": 44.52, "w": 30.52, "h": 10.96, "label": "Efficient deliberation within the control deadline"}, {"d": 9, "l": 42.02, "t": 22.34, "w": 20.78, "h": 15.37, "label": "Risk-aware control: uncertainty, irreversibility, fallback"}, {"d": 10, "l": 38.18, "t": 2.0, "w": 28.47, "h": 16.11, "label": "Verified imagination: gated interface between learned dynamics and TAMP (no guarantee yet)"}];
 // reveal on scroll
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
