@@ -1,114 +1,39 @@
-"""Figure 7 of the paper: source-reported data scales on a logarithmic hours axis.
-
-The y coordinate is logarithmic in reported hours. Circle area is affine in
-log10(hours), between radii of 4 and 22 points for the smallest and largest
-reported values/thresholds. Circle areas are NOT proportional to raw hours.
-"""
+"""Fig. 7 of the paper: source-reported data scales as labelled points on a
+logarithmic hours axis. Every record uses the same marker; the value is encoded
+once, by vertical position. Input: data/figure07_data_scale.csv."""
+import csv, sys
 from pathlib import Path
-import argparse,json,math,subprocess,shutil
-from reportlab.graphics.shapes import Drawing,String,Line,Circle,Group
-from reportlab.graphics import renderPDF,renderSVG
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.lib.colors import HexColor
-import reportlab
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
-HERE=Path(__file__).resolve().parent
-INK='#30383D';GREY='#697176';GRID='#E2E5E6'
-WIDTH=7.16*72
-# Each plotted record has a distinct pale fill and a darker matching outline.
-PALETTE={
-    'cosmos_raw':('#DCEAF7','#567BA1'),
-    'vjepa2_pretrain':('#D6EEE9','#4F8276'),
-    'dreamer4_video':('#E7DFF2','#837094'),
-    'pi0_pretrain':('#F6E0CB','#B18155'),
-    'droid_full':('#F2ECC6','#998A43'),
-    'dreamer4_actions':('#F1DCE2','#AA7381'),
-    'vjepa2_ac':('#E2EACF','#788953'),
-}
-STEM='figure07_data_scale_bubbles'
+def label(v, bound):
+    txt = f"{v/1e6:g}M" if v >= 1e6 else (f"{v/1000:g}k" if v >= 10000 else f"{v:,g}")
+    return {"approximate": "≈", "reported_point": "", "lower_bound": ">", "upper_bound": "<"}[bound] + txt + " h"
 
-def fonts():
-    bundled=Path(reportlab.__file__).parent/'fonts'
-    pairs=[(Path('C:/Windows/Fonts/arial.ttf'),Path('C:/Windows/Fonts/arialbd.ttf')),
-           (Path('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'),Path('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')),
-           (bundled/'Vera.ttf',bundled/'VeraBd.ttf')]
-    for normal,bold in pairs:
-        if normal.exists() and bold.exists():
-            pdfmetrics.registerFont(TTFont('Chart',str(normal)))
-            pdfmetrics.registerFont(TTFont('Chart-Bold',str(bold)))
-            return
-    raise RuntimeError('No suitable TrueType font found. Configure fonts() for this platform.')
+def main(csv_path, out_stem):
+    rows = {r["record_id"]: r for r in csv.DictReader(open(csv_path, encoding="utf-8-sig"))}
+    order = ["cosmos_raw", "vjepa2_pretrain", "dreamer4_video", "pi0_pretrain", "droid_full", "dreamer4_actions", "vjepa2_ac"]
+    names = ["Cosmos\nraw collection", "V-JEPA 2\npretraining", "Dreamer 4\nvideo pool", "$\\pi_0$\npretraining",
+             "DROID\ncorpus", "Dreamer 4\nlabel ablation", "V-JEPA 2-AC\npost-training"]
+    plt.rcParams.update({"font.family": "serif", "font.size": 8, "mathtext.fontset": "cm"})
+    fig, ax = plt.subplots(figsize=(7.16, 2.7))
+    for i, rid in enumerate(order):
+        v = float(rows[rid]["reported_hours"])
+        ax.plot(i, v, "o", ms=5.5, color="#30383D")
+        ax.annotate(label(v, rows[rid]["bound_type"]), (i, v), xytext=(0, 7), textcoords="offset points", ha="center", fontsize=8)
+    ax.set_yscale("log"); ax.set_ylim(10, 3e8); ax.set_xlim(-0.6, 6.6)
+    ax.set_xticks(range(7)); ax.set_xticklabels(names, fontsize=7.5)
+    ax.set_ylabel("Source-reported hours (log scale)")
+    ax.grid(axis="y", color="#E2E5E6", lw=0.6); ax.set_axisbelow(True)
+    for x in (2.5, 4.5): ax.axvline(x, color="#C6CBCF", lw=0.6)
+    for x, h in ((1, "Video sources"), (3.5, "Robot data"), (5.5, "Adaptation / ablation")):
+        ax.text(x, 1.2e8, h, ha="center", va="center", fontsize=8, fontweight="bold")
+    for s in ("top", "right"): ax.spines[s].set_visible(False)
+    fig.tight_layout()
+    fig.savefig(out_stem + ".pdf"); fig.savefig(out_stem + ".png", dpi=300)
 
-def text(d,x,y,s,size=9,bold=False,anchor='start',color=INK):
-    d.add(String(x,y,s,fontName='Chart-Bold' if bold else 'Chart',fontSize=size,textAnchor=anchor,fillColor=HexColor(color)))
-
-def line(d,x1,y1,x2,y2,color=GRID,width=.55):
-    d.add(Line(x1,y1,x2,y2,strokeColor=HexColor(color),strokeWidth=width))
-
-def radius(value,smallest,largest):
-    if not (0<smallest<=value<=largest):raise ValueError('Bubble value outside the positive input range.')
-    t=math.log10(value/smallest)/math.log10(largest/smallest)
-    return math.sqrt(4**2+(22**2-4**2)*t)
-
-def value_label(row):
-    v=row['value_hours']
-    label=f'{v/1e6:g}M' if v>=1e6 else (f'{v/1000:g}k' if v>=10000 else f'{v:,g}')
-    return {'approximate':'≈','reported_point':'','lower_bound':'>','upper_bound':'<'}[row['bound_type']]+label
-
-def draw(data,out):
-    rows={r['id']:r for r in data['figure07']['records']}
-    order=['cosmos_raw','vjepa2_pretrain','dreamer4_video','pi0_pretrain','droid_full','dreamer4_actions','vjepa2_ac']
-    names=[('Cosmos','raw collection'),('V-JEPA 2','pretraining'),('Dreamer 4','video pool'),('π','pretraining'),
-           ('DROID','corpus'),('Dreamer 4','label ablation'),('V-JEPA 2-AC','post-training')]
-    smallest=min(r['value_hours'] for r in rows.values());largest=max(r['value_hours'] for r in rows.values())
-    d=Drawing(WIDTH,3.25*72)
-    left,right,bottom,top=60,503,35,193
-    xmap=lambda x:left+(x+.55)/7.1*(right-left)
-    ymap=lambda h:bottom+(math.log10(h)-1)/7*(top-bottom)
-    for k in range(1,9):
-        y=ymap(10**k);line(d,left,y,right,y)
-        line(d,left-3,y,left,y,color=GREY)
-        text(d,left-8,y-3,'10'+str(k).translate(str.maketrans('12345678','¹²³⁴⁵⁶⁷⁸')),size=8.5,anchor='end')
-    line(d,left,bottom,left,top,color='#9DA4A7',width=.6)
-    g=Group();g.add(String(0,0,'Source-reported hours (log scale)',fontName='Chart',fontSize=9,textAnchor='middle',fillColor=HexColor(INK)))
-    g.translate(17,(bottom+top)/2);g.rotate(90);d.add(g)
-    for x in [2.5,4.5]:line(d,xmap(x),bottom,xmap(x),top,color='#C6CBCF',width=.6)
-    for x,heading in [(1,'Video sources'),(3.5,'Robot data'),(5.5,'Adaptation / ablation')]:
-        text(d,xmap(x),219,heading,size=9,bold=True,anchor='middle')
-    plotted=[]
-    for i,rid in enumerate(order):
-        row=rows[rid];value=row['value_hours'];r=radius(value,smallest,largest)
-        x,y=xmap(i),ymap(value)
-        fill,edge=PALETTE[rid]
-        d.add(Circle(x,y,r,fillColor=HexColor(fill),strokeColor=HexColor(edge),strokeWidth=.85))
-        text(d,x,y+r+6,value_label(row),size=9,bold=True,anchor='middle')
-        if rid=='pi0_pretrain':
-            text(d,x-2,18,'π',size=9,anchor='middle');text(d,x+2.2,16,'0',size=6.3,anchor='middle')
-        else:text(d,x,18,names[i][0],size=8.1,anchor='middle')
-        text(d,x,6,names[i][1],size=7.9,color=GREY,anchor='middle')
-        plotted.append({'record_id':rid,'hours':value,'bound_type':row['bound_type'],'label':value_label(row),
-                        'x_pt':x,'y_pt':y,'radius_pt':r,'area_pt2':math.pi*r*r,
-                        'fill_color':fill,'outline_color':edge})
-    out.mkdir(parents=True,exist_ok=True)
-    renderPDF.drawToFile(d,str(out/f'{STEM}.pdf'))
-    renderSVG.drawToFile(d,str(out/f'{STEM}.svg'))
-    if shutil.which('pdftoppm'):
-        subprocess.run(['pdftoppm','-singlefile','-r','400','-png',str(out/f'{STEM}.pdf'),str(out/STEM)],
-            check=True,capture_output=True,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-    else:print('PDF/SVG saved. Install Poppler (pdftoppm) for a PNG preview.')
-    return {'minimum_threshold_hours':smallest,'maximum_threshold_hours':largest,
-            'radius_range_pt':[4,22], 'area_formula':'pi*(4^2 + (22^2-4^2)*log10(h/62)/log10(20000000/62))',
-            'raw_area_proportional':False,'points':plotted}
-
-def main():
-    ap=argparse.ArgumentParser()
-    ap.add_argument('--data',type=Path,default=HERE.parent/'data/figure_inputs.json')
-    ap.add_argument('--out',type=Path,default=HERE.parent/'figures')
-    ap.add_argument('--manifest',type=Path)
-    args=ap.parse_args();fonts();data=json.loads(args.data.read_text(encoding='utf-8'))
-    spec=draw(data,args.out)
-    if args.manifest:args.manifest.write_text(json.dumps(spec,indent=2),encoding='utf-8')
-    print('Saved bubble chart to '+str(args.out))
-
-if __name__=='__main__':main()
+if __name__ == "__main__":
+    here = Path(__file__).resolve().parent
+    main(sys.argv[1] if len(sys.argv) > 1 else str(here.parent / "data" / "figure07_data_scale.csv"),
+         sys.argv[2] if len(sys.argv) > 2 else str(here.parent / "figures" / "figure07_data_scale"))

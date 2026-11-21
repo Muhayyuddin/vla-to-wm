@@ -1,4 +1,4 @@
-# Evidence coding rules for the limitation-to-mechanism map (Table 3)
+# Evidence coding rules for the limitation-to-mechanism map
 
 The unit of coding is a claim and its experimental contrast, linked to one
 source version and one report. A report can contribute several contrasts and
@@ -11,14 +11,17 @@ A comparison enters the evidence ledger when
 1. the evaluated task is robotic manipulation or, for latent-dynamics systems,
    a continuous-control domain recorded as other-domain;
 2. the report identifies the baseline against which the change is measured;
-3. the measured outcome maps to one of L1–L6; and
+3. the measured outcome maps to one of L1–L6 or to the cost of prediction, or is aggregate task
+   performance, which is recorded in class G and is indirect for every limitation category; and
 4. the compared package is described in enough detail to label the claim as
    direct, indirect, or prospective.
 
-All comparisons that meet these criteria are retained, including mixed and
-adverse outcomes. Table 3 presents, for each limitation, the entries that
-measure the stated outcome most directly under a reported protocol; the
-remaining entries are cited in the corresponding subsections of the paper.
+The ledger is a purposive sample: it holds the comparisons on which the paper relies and is
+not an exhaustive extraction from all 144 included reports. Mixed and adverse outcomes are
+kept. Rows whose source is outside the counted corpus are kept as context and flagged in
+`corpus_status`. Rows that rest on an abstract-level statement say so in `source_version`
+and `source_locator`. The column `in_matrix_table` marks the rows shown in the limitation-to-mechanism
+matrix of the paper; class-G and cost rows are reported in the text.
 
 ## What counts as the stated outcome
 

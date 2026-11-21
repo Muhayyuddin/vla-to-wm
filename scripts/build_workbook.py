@@ -71,8 +71,10 @@ def main():
     sheet(wb, 'Datasets', ['Corpus', 'Reported scale', 'Modality', 'License', 'Source version', 'Source URL', 'Verification date'], DATASETS)
     ds = list(csv.DictReader(open(DATA / 'figure07_data_scale.csv', encoding='utf-8')))
     sheet(wb, 'Data scale (Fig. 7)', list(ds[0].keys()), [r.values() for r in ds])
-    wg = list(csv.DictReader(open(DATA / 'figure12_world_gymnast.csv', encoding='utf-8')))
-    sheet(wb, 'World-Gymnast (Fig. 12)', list(wg[0].keys()), [r.values() for r in wg])
+    wg = list(csv.DictReader(open(DATA / 'table03_world_gymnast.csv', encoding='utf-8')))
+    sheet(wb, 'World-Gymnast (Table 3)', list(wg[0].keys()), [r.values() for r in wg])
+    dc = list(csv.DictReader(open(DATA / 'double_coding_subsample.csv', encoding='utf-8')))
+    sheet(wb, 'Double coding', list(dc[0].keys()), [r.values() for r in dc])
     sc = json.loads((DATA / 'screening_counts.json').read_text())
     flat = []
     def walk(d, prefix=''):

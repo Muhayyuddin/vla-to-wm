@@ -1,12 +1,57 @@
-# From Reactive Vision-Language-Action Policies to Predictive World Models: A Review for Robotic Manipulation
+# From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation
 
-Supplementary materials for the review article of the same title (Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob, and Irfan Hussain; submitted to IEEE Access). The review maps 144 reports on the transition from direct action prediction in vision-language-action (VLA) policies to predictive world models, connects six recurring VLA limitations to candidate world-model mechanisms, and examines whether the reported experiments demonstrate the intended benefit. This repository holds the literature register, screening records, search log, claim-level evidence ledger, companion workbook, and the data and scripts behind the paper's two quantitative figures.
+[**Project page**](https://muhayyuddin.github.io/vla-to-wm/) · [**Paper (PDF)**](https://muhayyuddin.github.io/vla-to-wm/assets/manuscript.pdf) · [**Overview video**](https://muhayyuddin.github.io/vla-to-wm/#video) · [**Cite**](#citing)
+
+A survey of **vision-language-action (VLA) models**, **world models**, and **world action models (WAM)** for **robotic manipulation**, with a curated, source-linked list of the models, benchmarks, and datasets it covers.
+
+This repository accompanies the review article of the same title by Muhayy Ud Din, Ahsan B. Bakht, Ibrar Yaqoob, and Irfan Hussain (submitted to IEEE Access). The review maps 144 reports on the transition from direct action prediction in VLA policies to predictive world models, connects six recurring VLA limitations to candidate world-model mechanisms, and examines whether the reported experiments demonstrate the intended benefit.
+
+**What you will find here**
+
+- A catalogue of VLA models, world models, and world action models with links to the primary papers (RT-2, OpenVLA, π0, GR00T N1, Gemini Robotics, DreamerV3, V-JEPA 2, Cosmos, Genie, DreamGen, WorldVLA, and others).
+- The literature register of 217 screened records, the search log, and the screening counts.
+- A claim-level evidence ledger that links each world-model benefit to the experiment that tested it.
+- The data and scripts behind the paper's quantitative figure and table.
+
+**Keywords:** vision-language-action models, VLA, world models, world action models, WAM, robot foundation models, embodied AI, robotic manipulation, robot learning, generalist robot policies, video prediction, latent dynamics, JEPA, model-based reinforcement learning, manipulation benchmarks, survey, review.
+
+## Quick answers
+
+**What is this review about?**  
+It is a review of vision-language-action (VLA) models and predictive world models for robotic manipulation. It maps 144 reports and asks whether world models, including world action models, actually address the documented limitations of VLA policies.
+
+**What is a vision-language-action (VLA) model?**  
+A VLA model is a robot policy that maps visual observations and a language instruction directly to robot actions. Examples covered in the review include RT-2, OpenVLA, π0, GR00T N1 and Gemini Robotics.
+
+**What is a world model in robotics?**  
+A world model predicts how a scene will change in response to a robot's actions. A robot can use it to imagine outcomes before acting, to generate training data, or to evaluate a policy without running the real robot.
+
+**What is a world action model (WAM)?**  
+A world action model predicts future observations and robot actions together in one model. Examples covered in the review include WorldVLA, FLARE, Cosmos Policy and DreamZero.
+
+**Do world models make VLA policies better?**  
+In specific respects, yes. Synthetic trajectories from world models raise success on new tasks, and auxiliary future prediction raises policy success. However, physical validity, transfer across evaluation settings and calibrated safety are not yet established, so the evidence does not yet support world models as a general replacement for direct VLA policies.
+
+**Which limitations of VLA models does the review examine?**  
+Six categories: execution monitoring and recovery, distribution shift, data requirements, physical grounding, evaluation validity, and safety and uncertainty.
+
+**How does the review classify world models?**  
+Into six overlapping families: latent dynamics models, generative video models, latent prediction models such as JEPA, physical state models, learned environments for data and evaluation, and world action models.
+
+**How many papers does the review cover?**  
+144 included reports: 69 on VLA systems and analyses, 42 on world-model systems and analyses, and 33 on datasets, benchmarks and evaluation, drawn from reports available by August 2026.
+
+**What is verified imagination?**  
+It is the research direction proposed in the review: a gated interface in which a learned world model's predictions are admitted into a task planner only when support, effect and constraint-margin conditions are met, with runtime assurance as a fallback. It is presented as a research target, without a claimed guarantee.
+
+**What open research directions does the review identify?**  
+Ten directions in five groups: predictive foundations, learning and data, evaluation and deployment, safety and assurance, and verified planning.
 
 ## Contents
 
-- `data/` — literature register (CSV/XLSX), `screening_counts.json`, `search_log.csv`, `evidence_ledger.csv/.json`, `companion_workbook.xlsx`, and the inputs for Figs. 7 and 12.
-- `figures/` — Figs. 7 and 12 as PDF, SVG, and PNG.
-- `scripts/` — `generate_figure07.py`, `generate_figure12.py`, `build_workbook.py`.
+- `data/` — literature register (CSV/XLSX), `screening_counts.json`, `search_log.csv`, `evidence_ledger.csv/.json`, `companion_workbook.xlsx`, `double_coding_subsample.csv`, and the inputs for Fig. 7 and Table 3.
+- `figures/` — Fig. 7 as PDF and PNG.
+- `scripts/` — `generate_figure07.py`, `agreement.py`, `build_workbook.py`.
 - `docs/evidence_coding_rules.md` — eligibility criteria and label definitions for the evidence ledger.
 
 ## Model catalogue
@@ -198,9 +243,9 @@ Catalogue coverage: **72 policy rows, 52 predictive-system rows, and 31 related-
 
 ### Data scales (Fig. 7)
 
-![Source-reported data scales on a logarithmic hours axis](figures/figure07_data_scale_bubbles.png)
+![Source-reported data scales on a logarithmic hours axis](figures/figure07_data_scale.png)
 
-Seven source-reported records, kept with their bound type and reporting scope. They describe different populations and stages of learning and are not comparable as supervision budgets; bubble area grows with the logarithm of the value or bound (radius 4–22 pt), not with raw hours.
+Seven source-reported records, kept with their bound type and reporting scope. They describe different populations and stages of learning and are not comparable as supervision budgets; each record is one labelled point on a logarithmic hours axis.
 
 | Record | Hours | Type | What the number represents | Source |
 | --- | ---: | --- | --- | --- |
@@ -212,11 +257,9 @@ Seven source-reported records, kept with their bound type and reporting scope. T
 | Dreamer 4 action labels | 100 | Reported point | Nested action-label ablation condition within the gameplay pool | [Dreamer 4 v1](https://arxiv.org/pdf/2509.24527v1), §4.3 and Fig. 7 |
 | V-JEPA 2-AC | <62 | Upper bound | Filtered robot video for action-conditioned adaptation, excluding prior pretraining | [V-JEPA 2 v1](https://arxiv.org/html/2506.09985v1), §3.1 and Appendix B.1 |
 
-Data: `data/figure07_data_scale.csv`, `data/figure_inputs.json`, `data/figure07_bubble_encoding.json`.
+Data: `data/figure07_data_scale.csv`.
 
-### World-Gymnast versus SIMPLER (Fig. 12)
-
-![Real-robot task success after RL in SIMPLER versus the World-Gymnast learned environment](figures/figure12_world_gymnast_tasks.png)
+### World-Gymnast versus SIMPLER (Table 3)
 
 Real-robot task success after policy training, mean ± standard error over 10 trials per evaluation repeated five times, from [World-Gymnast v1, §4.1 and Table 1](https://arxiv.org/html/2602.02454v1). The comparison concerns the complete training packages and does not isolate world-model quality; no confidence interval or significance test is inferred for the differences.
 
@@ -227,7 +270,7 @@ Real-robot task success after policy training, mean ± standard error over 10 tr
 | Put the eggplant into the blue sink | 32 ± 10 | 72 ± 10 | +40 |
 | Put the eggplant into the yellow basket | 40 ± 10 | 78 ± 2 | +38 |
 
-Data: `data/figure12_world_gymnast.csv`.
+Data: `data/table03_world_gymnast.csv`.
 
 ### What the evidence supports
 
@@ -248,10 +291,10 @@ Prediction and search cost are treated as a cost of predictive mechanisms (Sec. 
 - **Practice inside learned environments:** World-Gymnast provides physical transfer evidence on four tasks, three favoring learned-world-model practice and one favoring SIMPLER; the comparison does not isolate world-model quality.
 - **Comparison of candidate actions:** the Cosmos Policy experiment evaluates a combined rollout-refinement and candidate-selection package; its benefit cannot be attributed to search alone.
 - **Passive-video pretraining:** large pretraining pools and small action-conditioned adaptation sets are promising, but their relative sizes do not isolate the contribution of passive video.
-- **Learned policy evaluation:** PolaRiS shows that generated rollouts can contain incorrect interactions and disagree with physical policy rankings.
+- **Learned policy evaluation:** self-reported validations are favorable (WorldEval: MMRV 0.044 and Pearson r 0.942 against real-robot success), while the one independent test, PolaRiS on the Ctrl-World pipeline, found hallucinated interactions and policy mis-ranking (MMRV 0.22).
 - **Safety and physical grounding:** prediction quality, constraint satisfaction, uncertainty calibration, and recovery behavior remain separate targets; no reviewed system verifies all of them together.
 
-The claim-level records behind Table 3 of the paper are in `data/evidence_ledger.csv`; the coding rules are in `docs/evidence_coding_rules.md`.
+The claim-level records are in `data/evidence_ledger.csv` (30 rows: 28 from 18 included reports and two contextual rows whose sources are outside the counted corpus, flagged in `corpus_status`). The ledger is a purposive sample of the comparisons the paper relies on, not an exhaustive extraction from all 144 reports. The column `in_matrix_table` marks the rows shown in Table 4 of the paper (the limitation-to-mechanism matrix); class-G rows record aggregate task performance and are indirect for L1–L6. The coding rules are in `docs/evidence_coding_rules.md`.
 
 ## Taxonomy used in the paper
 
@@ -311,12 +354,19 @@ The register (`data/literature_register.csv`) counts one report per source: vers
 
 Screening flow (`data/screening_counts.json`): 2,455 database and indexed-proceedings records plus 100 records from other discovery; 704 duplicates removed; 1,851 screened at title and abstract; 326 assessed at full text; 182 excluded (62 driving or navigation only, 49 without an action or control component, 44 with insufficient technical detail, 27 superseded versions); 144 included. `data/search_log.csv` lists the sources, their discovery route, the records retrieved by each route, and the targeted supplementary searches.
 
+### What the released records do and do not contain
+
+- **Register:** 217 records with a decision and a reason: 144 `Include`, 63 `Background`, 10 `Exclude` (non-report vendor or software sources). Every `Include` record is cited in the paper and marked with an asterisk in its reference list.
+- **Search log:** only two combined counts were retained (2,455 database and indexed-proceedings records; 100 records from other discovery routes). Subtotals per database or per route were not recorded. Targeted searches and primary-source checks of October 2026 are logged individually.
+- **Exclusions:** for the 1,525 records excluded at title and abstract screening and the 182 reports excluded at full text, only the aggregate counts by reason were retained. Record-level decisions for these exclusions are not available.
+- **Agreement check:** `data/double_coding_subsample.csv` is a random subsample of 43 register records (seed 20261115) with the second coder's decision, category and notes. `scripts/agreement.py` computes agreement and Cohen's kappa against the register: decision 42/43 (97.7%, kappa 0.95); primary category 40/43 (93.0%, kappa 0.90).
+
 ## Reproduce
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/generate_figure07.py      # figures/figure07_data_scale_bubbles.{pdf,svg,png}
-python scripts/generate_figure12.py      # figures/figure12_world_gymnast_tasks.{pdf,svg,png}
+python scripts/generate_figure07.py      # figures/figure07_data_scale.{pdf,png}
+python scripts/agreement.py              # agreement and Cohen's kappa for data/double_coding_subsample.csv
 python scripts/build_workbook.py         # data/companion_workbook.xlsx
 ```
 
@@ -328,12 +378,14 @@ The register, ledger, workbook, figure data, scripts, and documentation in this 
 
 ## Citing
 
-```
+If this review or its data is useful in your work, please cite:
+
+```bibtex
 @article{din2026reactive,
   author  = {Ud Din, Muhayy and Bakht, Ahsan B. and Yaqoob, Ibrar and Hussain, Irfan},
-  title   = {From Reactive Vision-Language-Action Policies to Predictive World Models: A Review for Robotic Manipulation},
+  title   = {From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation},
   journal = {IEEE Access},
   year    = {2026},
-  note    = {Under review.}}
+  note    = {Under review. Project page: https://muhayyuddin.github.io/vla-to-wm/}
 }
 ```

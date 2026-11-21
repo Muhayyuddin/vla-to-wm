@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this review or its data, please cite the article below."
+title: "From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation"
+type: dataset
+url: "https://muhayyuddin.github.io/vla-to-wm/"
+repository-code: "https://github.com/Muhayyuddin/vla-to-wm"
+authors:
+  - family-names: "Ud Din"
+    given-names: "Muhayy"
+  - family-names: "Bakht"
+    given-names: "Ahsan B."
+  - family-names: "Yaqoob"
+    given-names: "Ibrar"
+  - family-names: "Hussain"
+    given-names: "Irfan"
+keywords:
+  - "vision-language-action models"
+  - "VLA"
+  - "world models"
+  - "world action models"
+  - "WAM"
+  - "robot foundation models"
+  - "embodied AI"
+  - "robotic manipulation"
+  - "robot learning"
+  - "generalist robot policies"
+  - "video prediction"
+  - "latent dynamics"
+  - "JEPA"
+  - "model-based reinforcement learning"
+  - "manipulation benchmarks"
+  - "survey"
+  - "review"
+preferred-citation:
+  type: article
+  title: "From Reactive Vision-Language-Action Models to Predictive World Models: A Review for Robotic Manipulation"
+  journal: "IEEE Access"
+  year: 2026
+  status: submitted
+  authors:
+    - family-names: "Ud Din"
+      given-names: "Muhayy"
+    - family-names: "Bakht"
+      given-names: "Ahsan B."
+    - family-names: "Yaqoob"
+      given-names: "Ibrar"
+    - family-names: "Hussain"
+      given-names: "Irfan"

@@ -1,0 +1,44 @@
+record_id,name,year,title,primary_url,second_coder_decision,second_coder_primary_category,second_coder_note
+R007,CogACT,2024,CogACT: A Foundational Vision-Language-Action Model for Synergizing Cognition and Action in Robotic Manipulation,https://arxiv.org/abs/2411.19650,Include,VLA,
+R012,DiffusionVLA / DiVLA,2024,Diffusion-VLA: Generalizable and Interpretable Robot Foundation Model via Self-Generated Reasoning,https://arxiv.org/abs/2412.03293,Include,VLA,
+R021,Gemini Robotics,2025,Gemini Robotics: Bringing AI into the Physical World,https://arxiv.org/abs/2503.20020,Include,VLA,
+R025,GR00T N1,2025,GR00T N1: An Open Foundation Model for Generalist Humanoid Robots,https://arxiv.org/abs/2503.14734,Include,VLA,
+R036,MemoryVLA,2025,MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation,https://arxiv.org/abs/2508.19236,Include,VLA,
+R039,OpenVLA,2024,OpenVLA: An Open-Source Vision-Language-Action Model,https://arxiv.org/abs/2406.09246,Include,VLA,
+R041,PD-VLA,2025,Accelerating Vision-Language-Action Model Integrated with Action Chunking via Parallel Decoding,https://arxiv.org/abs/2503.02310,Include,VLA,
+R042,PointVLA,2025,PointVLA: Injecting the 3D World into Vision-Language-Action Models,https://arxiv.org/abs/2503.07511,Include,VLA,
+R045,RDT-1B,2024,RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation,https://arxiv.org/abs/2410.07864,Include,VLA,
+R046,RIPT-VLA,2025,Interactive Post-Training for Vision-Language-Action Models,https://arxiv.org/abs/2505.17016,Include,VLA,
+R048,RoboFlamingo,2023,Vision-Language Foundation Models as Effective Robot Imitators,https://arxiv.org/abs/2311.01378,Include,VLA,
+R050,RoboVLMs,2024,What Matters in Building Vision-Language-Action Models for Generalist Robots,https://arxiv.org/abs/2412.14058,Include,VLA,"Empirical VLA design and policy learning, rather than a survey or general theory paper."
+R062,VLA-Adapter,2025,VLA-Adapter: An Effective Paradigm for Tiny-Scale Vision-Language-Action Model,https://arxiv.org/abs/2509.09372,Include,VLA,
+R078,Mobile ALOHA (contextual),2024,Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation,https://arxiv.org/abs/2401.02117,Background,Background / other,Manipulation system and imitation policy without language conditioning; outside the three included contribution types.
+R087,SayCan (contextual planner),2022,"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",https://arxiv.org/abs/2204.01691,Background,Background / other,
+R088,VIMA (contextual multimodal policy),2022,VIMA: General Robot Manipulation with Multimodal Prompts,https://arxiv.org/abs/2210.03094,Background,VLA,"Uses the first preprint date, October 2022, rather than the 2023 publication date."
+R091,AVDC,2023,Learning to act from actionless videos through dense correspondences,https://arxiv.org/abs/2310.08576,Include,World model,Video prediction supplies plans; actions are recovered through dense correspondences.
+R094,Ctrl-World,2025,Ctrl-World: A Controllable Generative World Model for Robot Manipulation,https://arxiv.org/abs/2510.10125,Include,World model,
+R116,StructVLA,2026,Beyond Dense Futures: World Models as Structured Planners for Robotic Manipulation,https://arxiv.org/abs/2603.12553,Include,World model,Hybrid system; structured future prediction is the central stated contribution.
+R119,TD-MPC2,2023,"TD-MPC2: Scalable, robust world models for continuous control",https://arxiv.org/abs/2310.16828,Include,World model,
+R122,UniPi,2023,Learning universal policies via text-guided video generation,https://arxiv.org/abs/2302.00111,Include,World model,Video-generation planner with a separate inverse-dynamics action decoder.
+R127,World-Gymnast,2026,World-Gymnast: Training robots with reinforcement learning in a world model,https://arxiv.org/abs/2602.02454,Include,VLA,Main contribution is VLA policy reinforcement learning using a world-model simulator.
+R132,Dreamer 4,2025,Training agents inside of scalable world models,https://arxiv.org/abs/2509.24527,Background,World model,"Includes robot-video simulations, but learned-policy control results are in Minecraft."
+R133,DreamerV2,2020,Mastering Atari with Discrete World Models,https://arxiv.org/abs/2010.02193,Background,World model,
+R140,Sora — 2024 report,2024,Video generation models as world simulators,https://openai.com/index/video-generation-models-as-world-simulators/,Background,World model,"Online technical report includes methods and qualitative results, but no robotic manipulation; differs from the example coding."
+R155,LIBERO-Plus,2025,LIBERO-Plus: In-depth robustness analysis of vision-language-action models,https://arxiv.org/abs/2510.13626,Include,Dataset / benchmark / evaluation,
+R157,ManipArena,2026,ManipArena: Comprehensive real-world evaluation of reasoning-oriented generalist robot manipulation,https://arxiv.org/abs/2603.28545,Include,Dataset / benchmark / evaluation,
+R161,Open X-Embodiment / RT-X,2023,Open X-Embodiment: Robotic learning datasets and RT-X models,https://arxiv.org/abs/2310.08864,Include,Dataset / benchmark / evaluation,"Includes policies, but the cross-embodiment dataset is the primary shared contribution."
+R170,RoboTwin 2.0,2025,RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation,https://arxiv.org/abs/2506.18088,Include,Dataset / benchmark / evaluation,
+R175,WorldArena,2026,WorldArena: A unified benchmark for evaluating perception and functional utility of embodied world models,https://arxiv.org/abs/2602.08971,Include,Dataset / benchmark / evaluation,
+R179,Physics-IQ,2025,Do generative video models understand physical principles?,https://arxiv.org/abs/2501.09038,Background,Dataset / benchmark / evaluation,"Outside manipulation scope, but retains its benchmark category under Step 2."
+R180,VBench-2.0,2025,VBench-2.0: Advancing video generation benchmark suite for intrinsic faithfulness,https://arxiv.org/abs/2503.21755,Background,Dataset / benchmark / evaluation,
+R182,WorldModelBench,2025,WorldModelBench: Judging video generation models as world models,https://arxiv.org/abs/2502.20694,Background,Dataset / benchmark / evaluation,"Includes robot-arm videos, but evaluates video generation without robot-action execution or conditioning."
+R183,A Comprehensive Survey on World Models for Embodied AI,2025,A Comprehensive Survey on World Models for Embodied AI,https://arxiv.org/abs/2510.16732,Background,Background / other,
+R184,A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning,2011,A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning,https://proceedings.mlr.press/v15/ross11a/ross11a.pdf,Background,Background / other,
+R190,A Survey on Vision-Language-Action Models for Embodied AI,2024,A Survey on Vision-Language-Action Models for Embodied AI,https://arxiv.org/abs/2405.14093,Background,Background / other,
+R191,AI Models Collapse When Trained on Recursively Generated Data,2024,AI Models Collapse When Trained on Recursively Generated Data,https://www.nature.com/articles/s41586-024-07566-y,Background,Background / other,
+R197,Multimodal Fusion with Vision-Language-Action Models for Robotic Manipulation,2026,Multimodal Fusion with Vision-Language-Action Models for Robotic Manipulation: A Systematic Review,https://doi.org/10.1016/j.inffus.2025.104062,Background,Background / other,
+R198,Pure Vision Language Action (VLA) Models,2025,Pure Vision Language Action (VLA) Models: A Comprehensive Survey,https://arxiv.org/abs/2509.19012,Background,Background / other,
+R200,The PRISMA 2020 Statement,2021,The PRISMA 2020 Statement: An Updated Guideline for Reporting Systematic Reviews,https://doi.org/10.1136/bmj.n71,Background,Background / other,
+R202,Vision-Language-Action Models,2025,"Vision-Language-Action Models: Concepts, Progress, Applications and Challenges",https://arxiv.org/abs/2505.04769,Background,Background / other,
+R212,Learning Symbolic Operators for TAMP,2021,Learning Symbolic Operators for Task and Motion Planning,https://arxiv.org/abs/2103.00589,Background,Background / other,
+R214,Predicate Invention for Bilevel Planning,2022,Predicate Invention for Bilevel Planning,https://arxiv.org/abs/2203.09634,Background,Background / other,
